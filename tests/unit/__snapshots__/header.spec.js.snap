@@ -1,0 +1,8 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header.vue to match with snapshot 1`] = `
+<header class="header">
+  <div class="bars"><img src="../assets/images/Bars.png" alt="Bars"></div>
+  <div class="avatar-menu"><img src="../assets/images/Avatar.png" alt="Avatar"></div>
+</header>
+`;
