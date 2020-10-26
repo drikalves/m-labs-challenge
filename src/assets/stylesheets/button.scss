@@ -1,0 +1,52 @@
+// Base
+
+.button {
+  align-items: center;
+  border: 1px solid;
+  border-radius: 4px;
+  display: flex;
+  font-family: arial;
+  justify-content: center;
+  min-height: 10px;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  vertical-align: top;
+}
+  
+// Variants
+
+.button--primary {
+  background-color: #2F80ED;
+  color: #FFF;
+}
+  
+.button--secondary {
+	background-color: #F2994A;
+  border-color: #E0812C;
+  color: #FFF;
+}
+  
+.button--tertiary {
+  background-color: transparent;
+  border-color: transparent;
+  color: #2F80ED;
+}
+
+.button--outline {
+  background-color: transparent;
+  border-color:#2F80ED;
+  color: #2F80ED;
+}
+
+// Sizes
+
+.button--small {
+  padding: 4px 24px;
+  font-size: small;
+}
+
+.button--large {
+  padding: 12px 38px;
+  font-size: large;
+}

@@ -1,13 +1,12 @@
 <template>
   <header class="header">
-      <div class="bars">
-        <img src="../assets/images/Bars.png" alt="Bars">
-      </div>
-
-      <div class="avatar-menu">
-        <img src="../assets/images/Avatar.png" alt="Avatar">
-      </div>
-    </header>
+    <div class="bars">
+      <img src="../assets/images/Bars.png" alt="Bars">
+    </div>
+    <div class="avatar-menu">
+      <img src="../assets/images/Avatar.png" alt="Avatar">
+    </div>
+  </header>
 </template>
 
 <style lang="scss">
