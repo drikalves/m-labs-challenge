@@ -2,7 +2,10 @@
   <div class="scheduling">
     <form class="schedule-form">
       <div class="card">
-        <div class='card-header'>Redes Sociais</div>
+        <div class='card-title'>
+          Redes Sociais
+        </div>
+
         <div class="card-content social-networks">
           <i class="circle-icon fab fa-instagram"></i>
           <i class="circle-icon fab fa-linkedin-in"></i>
@@ -14,18 +17,21 @@
       </div>
 
       <div class="card">
-        <div class='card-header'>Data da publicação</div>
+        <div class="card-title"
+          >Data de publicação
+        </div>
+
         <div class="card-content"></div>
       </div>
 
       <div class="card">
-        <div class='card-header'>Texto do post</div>
-        <div class="card-content"></div>
-      </div>
+        <div class="card-title">
+          Texto do post
+        </div>
 
-      <div class="card">
-        <div class='card-header'>Upload de imagem</div>
-        <div class="card-content"></div>
+        <div class="card-content">
+          <textarea class="textarea" placeholder="Escreva uma legenda" name="text-post"></textarea>
+        </div>
       </div>
 
       <button class="button button--large button--secondary button--block" href="">
@@ -63,6 +69,6 @@ export default {
 }
 
 .social-networks {
-  justify-content: space-around;
+  justify-content: space-between;
 }
 </style>

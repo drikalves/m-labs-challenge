@@ -1,7 +1,7 @@
 <template>
   <header class="header">
     <div class="bars">
-      <img src="../assets/images/Bars.png" alt="Bars">
+      <i class="fas fa-bars fa-2x"></i>
     </div>
     <div class="avatar-menu">
       <img src="../assets/images/Avatar.png" alt="Avatar">
