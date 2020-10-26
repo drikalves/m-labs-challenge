@@ -12,8 +12,8 @@ const routes = [
     component: Home,
   },
   {
-    path: '/Agendamento',
-    name: 'Agendamento',
+    path: '/agendamento',
+    name: 'Scheduling',
     component: Scheduling,
   },
 ];

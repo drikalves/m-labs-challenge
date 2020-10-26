@@ -4,7 +4,9 @@
       <img class="home-image" src="../assets/images/Vetor-posts.png" alt="Vector-posts">
     </figure>
 
-    <a class="button button--large button--secondary" href="#">Agendar post</a>
+    <router-link :to="{name: 'Scheduling'}" class="button button--large button--secondary">
+      Agendar post
+    </router-link>
   </div>
 </template>
 

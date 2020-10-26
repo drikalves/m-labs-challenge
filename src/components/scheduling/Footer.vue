@@ -20,7 +20,6 @@
   padding-right: 20px;
   padding-top: 28px;
   width: 100%;
-  z-index: 0;
 }
 
 .footer__container {
