@@ -23,17 +23,31 @@ export default {
   align-items: center;
   background-color: #FFF;
   display: fixed;
-  position: relative;
+  padding-bottom: 28px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 28px;
+  width: 100%;
   z-index: 0;
 }
 
 .footer__container {
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  padding-bottom: 20px;
-  padding-left: 28px;
-  padding-right: 28px;
-  padding-top: 20px;
+  justify-content: center;
+}
+
+.footer__container > .button {
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+.footer__container > .button:first-of-type {
+  margin-right: 10px;
+  margin-left: 0;
+}
+
+.footer__container > .button:last-of-type {
+  margin-right: 0;
+  margin-left: 10px;
 }
 </style>
