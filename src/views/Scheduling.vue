@@ -1,12 +1,34 @@
 <template>
   <div class="scheduling">
     <form class="schedule-form">
-      <div class="card">Redes Sociais</div>
-      <div class="card">Data da publicação</div>
-      <div class="card">Texto do post</div>
-      <div class="card">Upload de imagem</div>
+      <div class="card">
+        <div class='card-header'>Redes Sociais</div>
+        <div class="card-content social-networks">
+          <i class="circle-icon fab fa-instagram"></i>
+          <i class="circle-icon fab fa-linkedin-in"></i>
+          <i class="circle-icon circle-icon--is-disabled fab fa-youtube"></i>
+          <i class="circle-icon circle-icon--is-disabled fab fa-pinterest"></i>
+          <i class="circle-icon circle-icon--is-disabled fab fa-twitter"></i>
+          <i class="circle-icon circle-icon--is-disabled fab fa-facebook-f"></i>
+        </div>
+      </div>
 
-      <button class="button button--large button--secondary button--fullwidth" href="">
+      <div class="card">
+        <div class='card-header'>Data da publicação</div>
+        <div class="card-content"></div>
+      </div>
+
+      <div class="card">
+        <div class='card-header'>Texto do post</div>
+        <div class="card-content"></div>
+      </div>
+
+      <div class="card">
+        <div class='card-header'>Upload de imagem</div>
+        <div class="card-content"></div>
+      </div>
+
+      <button class="button button--large button--secondary button--block" href="">
         Vizualizar post
       </button>
     </form>
@@ -26,6 +48,10 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.scheduling{
+  padding-bottom: 80px;
+}
+
 .schedule-form {
   width: 100%;
   display: flex;
@@ -36,12 +62,7 @@ export default {
   padding: 17px 30px;
 }
 
-.card {
-  background-color: #FFF;
-  border: 1px solid #E0E0E0;
-  border-radius: 4px;
-  padding: 18px;
-  margin-bottom: 15px;
-  width: 100%;
+.social-networks {
+  justify-content: space-around;
 }
 </style>

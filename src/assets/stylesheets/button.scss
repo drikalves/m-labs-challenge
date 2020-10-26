@@ -51,6 +51,9 @@
   font-size: large;
 }
 
-.button--fullwidth {
+// Behavior
+
+.button--block {
+  display: flex;
   width: 100%;
 }

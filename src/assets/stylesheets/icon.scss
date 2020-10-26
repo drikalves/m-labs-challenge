@@ -1,0 +1,25 @@
+// Base
+
+.circle-icon {
+    background-color: #FFF;
+    border: 1px solid #989898;
+    border-radius: 50%;
+    height: 33px;
+    padding: 8px 6px;
+    text-align: center;
+    width: 33px;
+    vertical-align: middle;
+  }
+  
+// States
+  
+.circle-icon--is-disabled {
+  background-color: #DDDDDD;
+  border-color: #989898;
+  color: #989898;
+  pointer-events: none;
+  
+  & > * {
+    color: #989898;
+  }
+}
