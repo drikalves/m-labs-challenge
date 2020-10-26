@@ -1,9 +1,9 @@
 <template>
   <footer class="footer">
     <div class="footer__container">
-      <a class='button button--small button--tertiary' href="">Cancelar</a>
-      <a class='button button--small button--outline' href="">Rascunho</a>
-      <a class='button button--small button--primary' href="">Agendar</a>
+      <a class="button button--small button--tertiary" href="">Cancelar</a>
+      <a class="button button--small button--outline" href="">Rascunho</a>
+      <a class="button button--small button--primary" href="">Agendar</a>
     </div>
   </footer>
 </template>

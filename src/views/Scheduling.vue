@@ -2,7 +2,7 @@
   <div class="scheduling">
     <form class="schedule-form">
       <div class="card">
-        <div class='card-title'>
+        <div class="card-title">
           Redes Sociais
         </div>
 

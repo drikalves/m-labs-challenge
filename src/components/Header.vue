@@ -3,6 +3,7 @@
     <div class="bars">
       <i class="fas fa-bars fa-2x"></i>
     </div>
+
     <div class="avatar-menu">
       <img src="../assets/images/Avatar.png" alt="Avatar">
     </div>
