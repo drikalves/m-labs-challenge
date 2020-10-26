@@ -22,7 +22,9 @@ export default {
 .footer {
   align-items: center;
   background-color: #FFF;
-  display: fixed;
+  bottom: 0;
+  left: 0;
+  position: fixed;
   padding-bottom: 28px;
   padding-left: 20px;
   padding-right: 20px;
