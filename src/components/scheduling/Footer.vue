@@ -16,8 +16,8 @@
   left: 0;
   position: fixed;
   padding-bottom: 28px;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-left: 30px;
+  padding-right: 30px;
   padding-top: 28px;
   width: 100%;
 }
