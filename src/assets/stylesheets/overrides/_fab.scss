@@ -1,0 +1,30 @@
+.fab {
+	background-color: white;
+	border: 1px solid #989898;
+	padding: 8px;
+	width: 33px;
+	text-align: center;
+	text-decoration: none;
+	border-radius: 50%;
+
+	&:hover {
+		background-color: #FFF3E0;
+		border-color: #EF9F2E;
+		color: #EF9F2E;
+	}
+
+	&:disabled {
+		@extend .fab--is-disabled;
+	}
+}
+
+.fab--is-disabled {
+	background-color: #DDDDDD;
+	border-color: #9E9E9E;
+	color: #989898;
+	pointer-events: none;
+
+	& > * {
+		color: #989898;
+	}
+}

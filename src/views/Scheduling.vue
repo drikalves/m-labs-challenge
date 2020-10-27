@@ -24,7 +24,7 @@
         <div class="card-content post-datetime">
           <div class="input-container">
             <i class="fas fa-calendar-alt icon"></i>
-            <input class="input-field" type="text" placeholder="DD/MM/AAAA">
+            <input class="input-field" type="text" placeholder="DD/MM">
           </div>
 
           <div class="input-container">
@@ -44,8 +44,25 @@
         </div>
       </div>
 
+      <div class="card">
+        <div class="card-title">
+          Upload de imagem
+        </div>
+
+        <div class="card-content">
+          <div class="upload-image">
+            <label
+              class="button button--outline"
+              for="arquivo">
+              Pesquisar imagens
+            </label>
+            <input type="file" id="arquivo">
+          </div>
+        </div>
+      </div>
+
       <button class="button button--large button--secondary button--block" href="">
-        Vizualizar post
+        Visualizar post
       </button>
     </form>
     <Footer />
@@ -90,36 +107,19 @@ export default {
   width: 45%;
 }
 
-.fab {
-  background-color: white;
-  border: 1px solid #989898;
-  padding: 8px;.post-datetime > .input-container:first-of-type {
-  margin-right: 15px;
-}
-  width: 33px;
-  text-align: center;
-  text-decoration: none;
-  border-radius: 50%;
-
-  &:hover {
-    background-color: #FFF3E0;
-    border-color: #EF9F2E;
-    color: #EF9F2E;
-  }
-
-  &:disabled {
-    @extend .fab--is-disabled;
-  }
+.upload-image {
+  border: 1px dashed #BDBDBD;
+  border-radius: 4px;
+  min-height: 80px;
+  width: 100%;
 }
 
-.fab--is-disabled {
-  background-color: #DDDDDD;
-  border-color: #9E9E9E;
-  color: #989898;
-  pointer-events: none;
+.upload-image > label.button {
+  margin: 24px 43px;
+  font-weight: bold;
+}
 
-  & > * {
-    color: #989898;
-  }
+.upload-image > input[type="file"] {
+  display: none;
 }
 </style>
