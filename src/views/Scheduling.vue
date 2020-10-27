@@ -7,12 +7,12 @@
         </div>
 
         <div class="card-content social-networks">
-          <i class="circle-icon fab fa-instagram"></i>
-          <i class="circle-icon fab fa-linkedin-in"></i>
-          <i class="circle-icon circle-icon--is-disabled fab fa-youtube"></i>
-          <i class="circle-icon circle-icon--is-disabled fab fa-pinterest"></i>
-          <i class="circle-icon circle-icon--is-disabled fab fa-twitter"></i>
-          <i class="circle-icon circle-icon--is-disabled fab fa-facebook-f"></i>
+          <i class="fab fa-instagram"></i>
+          <i class="fab fa-linkedin-in"></i>
+          <i class="fab fa-youtube"></i>
+          <i class="fab fa-pinterest"></i>
+          <i class="fab fa-twitter"></i>
+          <i class="fab fa-facebook-f"></i>
         </div>
       </div>
 
@@ -70,5 +70,35 @@ export default {
 
 .social-networks {
   justify-content: space-between;
+}
+
+.fab {
+  background-color: white;
+  border: 1px solid #989898;
+  padding: 8px;
+  width: 33px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 50%;
+
+  &:hover {
+    border-color: #EF9F2E;
+    color: #EF9F2E;
+  }
+
+  &:disabled {
+    @extend .fab--is-disabled;
+  }
+}
+
+.fab--is-disabled {
+  background-color: #DDDDDD;
+  border-color: #989898;
+  color: #989898;
+  pointer-events: none;
+
+  & > * {
+    color: #989898;
+  }
 }
 </style>

@@ -57,3 +57,16 @@
   display: flex;
   width: 100%;
 }
+
+// States
+
+.button--is-disabled {
+  background-color: #DDDDDD;
+  border-color: transparent;
+  color: #989898;
+  pointer-events: none;
+
+  & > * {
+    color: #DDDDDD;
+  }
+}
