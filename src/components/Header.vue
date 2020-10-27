@@ -5,7 +5,7 @@
     </div>
 
     <div class="avatar-menu">
-      <img src="../assets/images/Avatar.png" alt="Avatar">
+      <img src="../assets/images/Avatar.svg" alt="Avatar">
     </div>
   </header>
 </template>

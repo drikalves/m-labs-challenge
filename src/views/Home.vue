@@ -1,7 +1,7 @@
 <template>
   <div class="home">
     <figure class="home-image__container">
-      <img class="home-image" src="../assets/images/Vetor-posts.png" alt="Vector-posts">
+      <img class="home-image" src="../assets/images/Vetor-posts.svg" alt="Vector-posts">
     </figure>
 
     <router-link :to="{name: 'Scheduling'}" class="button button--large button--secondary">
