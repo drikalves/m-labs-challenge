@@ -1,9 +1,15 @@
 <template>
   <footer class="footer">
     <div class="footer__container">
-      <a class="button button--small button--tertiary" href="">Cancelar</a>
+      <router-link :to="{name: 'Home'}" class="button button--small button--tertiary">
+        Cancelar
+      </router-link>
+
       <a class="button button--small button--outline" href="">Rascunho</a>
-      <a class="button button--small button--primary" href="">Agendar</a>
+
+      <router-link :to="{name: 'Listing'}" class="button button--small button--primary">
+        Agendar
+      </router-link>
     </div>
   </footer>
 </template>
