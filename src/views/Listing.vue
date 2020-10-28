@@ -1,5 +1,42 @@
 <template>
-  <div class="card"></div>
+  <div class="listing scrolling-wrapper">
+    <table class="table">
+      <caption class="caption">
+        Listagem de agendamento
+      </caption>
+
+      <tr>
+        <th>Redes Sociais</th>
+        <th>Mídia</th>
+        <th>Texto</th>
+        <th>Data</th>
+        <th>Ações</th>
+        <th>Status</th>
+      </tr>
+
+      <tr>
+        <td>
+          <i class="fab fa-instagram"></i>
+        </td>
+        <td>
+          <img src="../assets/images/photo.jpg" alt="" />
+        </td>
+        <td class="table-column-left">
+          Aqui vai o texto descritivo desse post
+        </td>
+        <td>09/09/2020 às 14:45h</td>
+        <td>
+          <a href="">Preview</a>
+        </td>
+        <td>
+          <div class="table-status">
+            <img src="../assets/images/agendado.svg" alt="" />
+            <p class="status">Agendado</p>
+          </div>
+        </td>
+      </tr>
+    </table>
+  </div>
 </template>
 
 <script>
@@ -10,5 +47,20 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.listing {
+  padding-bottom: 80px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 80px;
+}
 
+.scrolling-wrapper {
+  overflow-x: scroll;
+  overflow-y: hidden;
+  white-space: nowrap;
+}
+
+.status {
+  padding-left: 6px;
+}
 </style>

@@ -1,6 +1,6 @@
 <template>
   <div class="scheduling">
-    <form class="schedule-form">
+    <form class="scheduling-form">
       <div class="card">
         <div class="card-title">
           Redes Sociais
@@ -85,7 +85,7 @@ export default {
   padding-bottom: 80px;
 }
 
-.schedule-form {
+.scheduling-form {
   align-items: center;
   display: flex;
   flex-direction: column;
