@@ -1,3 +1,5 @@
+// Base
+
 .fab {
 	background-color: white;
 	border: 1px solid #989898;
@@ -17,6 +19,8 @@
 		@extend .fab--is-disabled;
 	}
 }
+
+// States
 
 .fab--is-disabled {
 	background-color: #DDDDDD;

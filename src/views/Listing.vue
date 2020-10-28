@@ -1,7 +1,7 @@
 <template>
   <div class="listing scrolling-wrapper">
     <table class="table">
-      <caption class="caption">
+      <caption class="table-caption">
         Listagem de agendamento
       </caption>
 
@@ -21,8 +21,8 @@
         <td>
           <img src="../assets/images/photo.jpg" alt="" />
         </td>
-        <td class="table-column-left">
-          Aqui vai o texto descritivo desse post
+        <td class="table-text">
+          Aqui vai o texto descritivo desse post suiuiahdusa asihaIUSHAUsha SAUshAHSA
         </td>
         <td>09/09/2020 às 14:45h</td>
         <td>
@@ -58,9 +58,5 @@ export default {
   overflow-x: scroll;
   overflow-y: hidden;
   white-space: nowrap;
-}
-
-.status {
-  padding-left: 6px;
 }
 </style>
