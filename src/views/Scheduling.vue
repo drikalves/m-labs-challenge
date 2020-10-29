@@ -68,6 +68,24 @@
         Visualizar post
       </button>
     </form>
+
+    <!-- <div class="modal modal--is-open" aria-modal="true">
+      <div class="modal__wrapper">
+        <div class="modal__dialog">
+          <div>
+            <img src="../assets/images/scheduling-post.jpg" />
+            <p>Agendado com sucesso!</p>
+          </div>
+        </div>
+        <button
+            class="button
+            button--primary button--medium
+            button--large">
+            OK
+          </button>
+      </div>
+    </div> -->
+
     <Footer :post="post" />
   </div>
 </template>
