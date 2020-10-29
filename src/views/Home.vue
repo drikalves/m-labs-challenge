@@ -1,10 +1,10 @@
 <template>
   <div class="home">
     <figure class="home-image__container">
-      <img class="home-image" src="../assets/images/Vetor-posts.svg" alt="Vector-posts">
+      <img class="home-image" src="../assets/images/post-vector.svg" alt="post-illustration">
     </figure>
 
-    <router-link :to="{name: 'Scheduling'}" class="button button--large button--secondary">
+    <router-link :to="{name: 'Scheduling'}" class="m-button m-button--large m-button--secondary">
       Agendar post
     </router-link>
   </div>

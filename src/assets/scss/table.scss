@@ -1,4 +1,4 @@
-.table {
+.m-table {
 	border-collapse: collapse;
 	display: inline-block;
 	font-size: 14px;
@@ -17,32 +17,32 @@
 	}
 }
 
-.table-caption {
+.m-table-caption {
 	color: rgb(79, 79, 79);
 	font-size: 16px;
 	padding-bottom: 30px;
 	text-align: left;
 }
 
-.table td,
-.table th {
+.m-table td,
+.m-table th {
 	border: 1px solid rgb(189, 189, 189);
 	min-width: 128px;
 	padding: 10px;
 }
 
-.table th {
+.m-table th {
 	font-size: 16px;
 	font-weight: normal;
 	padding-bottom: 2em;
 	padding-top: 2em;
 }
 
-.table-text {
+.m-table-text {
 	text-align: left;
 }
 
-.table-status {
+.m-table-status {
 	display: flex;
 	align-items: center;
 

@@ -1,7 +1,7 @@
 <template>
   <div class="listing scrolling-wrapper">
-    <table class="table">
-      <caption class="table-caption">
+    <table class="m-table">
+      <caption class="m-table-caption">
         Listagem de agendamento
       </caption>
 
@@ -21,7 +21,7 @@
         <td>
           <img src="../assets/images/photo.jpg" alt="" />
         </td>
-        <td class="table-text">
+        <td class="m-table-text">
           Aqui vai o texto descritivo desse post
         </td>
         <td>09/09/2020 às 14:45h</td>
@@ -29,7 +29,7 @@
           <a href="">Preview</a>
         </td>
         <td>
-          <div class="table-status">
+          <div class="m-table-status">
             <img src="../assets/images/agendado.svg" alt="" />
             <p class="status">Agendado</p>
           </div>

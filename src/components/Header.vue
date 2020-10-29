@@ -1,10 +1,10 @@
 <template>
   <header class="header">
-    <div class="bars">
+    <div>
       <i class="fas fa-bars fa-2x"></i>
     </div>
 
-    <div class="avatar-menu">
+    <div>
       <img src="../assets/images/Avatar.svg" alt="Avatar">
     </div>
   </header>

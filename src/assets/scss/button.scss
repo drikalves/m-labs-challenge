@@ -1,6 +1,6 @@
 // Base
 
-.button {
+.m-button {
   align-items: center;
   border: 1px solid;
   border-radius: 4px;
@@ -18,24 +18,24 @@
 
 // Variants
 
-.button--primary {
+.m-button--primary {
   background-color: rgb(47, 128, 237);
   color: rgb(255, 255, 255);
 }
   
-.button--secondary {
+.m-button--secondary {
 	background-color: rgb(242, 153, 74);
   border-color: rgb(224, 129, 44);
   color: rgb(255, 255, 255);
 }
   
-.button--tertiary {
+.m-button--tertiary {
   background-color: transparent;
   border-color: transparent;
   color: rgb(47, 128, 237);
 }
 
-.button--outline {
+.m-button--outline {
   background-color: transparent;
   border-color: rgb(47, 128, 237);
   color: rgb(47, 128, 237);
@@ -43,26 +43,26 @@
 
 // Sizes
 
-.button--small {
+.m-button--small {
   padding: 4px 24px;
   font-size: small;
 }
 
-.button--large {
+.m-button--large {
   padding: 12px 40px;
   font-size: large;
 }
 
 // Behavior
 
-.button--block {
+.m-button--block {
   display: flex;
   width: 100%;
 }
 
 // States
 
-.button--is-disabled {
+.m-button--is-disabled {
   background-color: rgb(221, 221, 221);
   border-color: transparent;
   color: rgb(152, 152, 152);

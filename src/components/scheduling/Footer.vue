@@ -1,13 +1,13 @@
 <template>
   <footer class="footer">
     <div class="footer__container">
-      <router-link :to="{name: 'Home'}" class="button button--small button--tertiary">
+      <router-link :to="{name: 'Home'}" class="m-button m-button--small m-button--tertiary">
         Cancelar
       </router-link>
 
-      <button class="button button--small button--outline" href="">Rascunho</button>
+      <button class="m-button m-button--small m-button--outline" href="">Rascunho</button>
 
-      <button @click="schedulePost" class="button button--small button--primary">
+      <button @click="schedulePost" class="m-button m-button--small m-button--primary">
         Agendar
       </button>
     </div>
@@ -47,17 +47,17 @@ export default {
   justify-content: center;
 }
 
-.footer__container > .button {
+.footer__container > .m-button {
   margin-right: 10px;
   margin-left: 10px;
 }
 
-.footer__container > .button:first-of-type {
+.footer__container > .m-button:first-of-type {
   margin-right: 10px;
   margin-left: 0;
 }
 
-.footer__container > .button:last-of-type {
+.footer__container > .m-button:last-of-type {
   margin-right: 0;
   margin-left: 10px;
 }

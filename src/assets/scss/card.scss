@@ -1,6 +1,6 @@
 //Base
 
-.card {
+.m-card {
   background-color: rgb(255, 255, 255);
   border: 1px solid rgb(224, 224, 224);
   border-radius: 4px;
@@ -8,7 +8,7 @@
   width: 100%;
 }
   
-.card-title {
+.m-card-title {
   border-bottom: 1px solid rgb(224, 224, 224);;
   font-family: Arial;
   font-size: 16px;
@@ -17,7 +17,7 @@
   width: 100%;
 }
 
-.card-content {
+.m-card-content {
   display: flex;
   padding: 16px 20px;
 }

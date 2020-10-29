@@ -1,12 +1,12 @@
 <template>
   <div class="scheduling">
     <form class="scheduling-form">
-      <div class="card">
-        <div class="card-title">
+      <div class="m-card">
+        <div class="m-card-title">
           Redes Sociais
         </div>
 
-        <div class="card-content social-networks">
+        <div class="m-card-content social-networks">
           <i class="fab fa-instagram" @click="selectSocialMidia('instagram')"></i>
           <i class="fab fa-linkedin-in" @click="selectSocialMidia('linkedin')"></i>
           <i class="fab fa-youtube fab--is-disabled"></i>
@@ -16,46 +16,46 @@
         </div>
       </div>
 
-      <div class="card">
-        <div class="card-title"
+      <div class="m-card">
+        <div class="m-card-title"
           >Data de publicação
         </div>
 
-        <div class="card-content post-datetime">
-          <div class="input-container">
-            <i class="fas fa-calendar-alt icon"></i>
-            <input v-model="post.date" class="input-field" type="text" placeholder="DD/MM">
+        <div class="m-card-content post-datetime">
+          <div class="m-input-container">
+            <i class="fas fa-calendar-alt m-icon"></i>
+            <input v-model="post.date" class="m-input-field" type="text" placeholder="DD/MM">
           </div>
 
-          <div class="input-container">
-            <i class="fas fa-clock icon"></i>
-            <input v-model="post.time" class="input-field" type="text" placeholder="HH:MM">
+          <div class="m-input-container">
+            <i class="fas fa-clock m-icon"></i>
+            <input v-model="post.time" class="m-input-field" type="text" placeholder="HH:MM">
           </div>
         </div>
       </div>
 
-      <div class="card">
-        <div class="card-title">
+      <div class="m-card">
+        <div class="m-card-title">
           Texto do post
         </div>
 
-        <div class="card-content">
+        <div class="m-card-content">
           <textarea
           v-model="post.text"
-          class="textarea"
+          class="m-textarea"
           placeholder="Escreva uma legenda"></textarea>
         </div>
       </div>
 
-      <div class="card">
-        <div class="card-title">
+      <div class="m-card">
+        <div class="m-card-title">
           Upload de imagem
         </div>
 
-        <div class="card-content">
+        <div class="m-card-content">
           <div class="upload-image">
             <label
-              class="button button--outline"
+              class="m-button m-button--outline"
               for="arquivo">
               Pesquisar imagens
             </label>
@@ -64,23 +64,23 @@
         </div>
       </div>
 
-      <button class="button button--large button--secondary button--block" href="">
+      <button class="m-button m-button--large m-button--secondary m-button--block" href="">
         Visualizar post
       </button>
     </form>
 
-    <!-- <div class="modal modal--is-open" aria-modal="true">
-      <div class="modal__wrapper">
-        <div class="modal__dialog">
+    <!-- <div class="m-modal m-modal--is-open" aria-modal="true">
+      <div class="m-modal__wrapper">
+        <div class="m-modal__dialog">
           <div>
             <img src="../assets/images/emoji.png" />
             <p>Agendado com sucesso!</p>
           </div>
         </div>
         <button
-            class="button
-            button--primary button--medium
-            button--large">
+            class="m-button
+            m-button--primary
+            m-button--large">
             OK
           </button>
       </div>
@@ -144,7 +144,7 @@ export default {
   justify-content: space-between;
 }
 
-.post-datetime > .input-container {
+.post-datetime > .m-input-container {
   width: 45%;
 }
 
@@ -155,7 +155,7 @@ export default {
   width: 100%;
 }
 
-.upload-image > label.button {
+.upload-image > label.m-button {
   margin: 24px 43px;
   font-weight: bold;
 }
