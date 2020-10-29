@@ -24,12 +24,12 @@
         <div class="card-content post-datetime">
           <div class="input-container">
             <i class="fas fa-calendar-alt icon"></i>
-            <input v-model="date" class="input-field" type="text" placeholder="DD/MM">
+            <input v-model="post.date" class="input-field" type="text" placeholder="DD/MM">
           </div>
 
           <div class="input-container">
             <i class="fas fa-clock icon"></i>
-            <input v-model="time" class="input-field" type="text" placeholder="HH:MM">
+            <input v-model="post.time" class="input-field" type="text" placeholder="HH:MM">
           </div>
         </div>
       </div>
@@ -41,7 +41,7 @@
 
         <div class="card-content">
           <textarea
-          v-model="text"
+          v-model="post.text"
           class="textarea"
           placeholder="Escreva uma legenda"></textarea>
         </div>
@@ -68,7 +68,7 @@
         Visualizar post
       </button>
     </form>
-    <Footer />
+    <Footer :post="post" />
   </div>
 </template>
 
@@ -82,20 +82,22 @@ export default {
   },
   data() {
     return {
-      socialMedia: null,
-      date: null,
-      time: null,
-      text: '',
-      image: null,
+      post: {
+        socialMedia: null,
+        date: null,
+        time: null,
+        text: '',
+        image: null,
+      },
     };
   },
   methods: {
     uploadFile({ target }) {
       const [file] = target.files;
-      this.image = file;
+      this.post.image = file;
     },
     selectSocialMidia(value) {
-      this.socialMedia = value;
+      this.post.socialMedia = value;
     },
   },
 };

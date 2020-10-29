@@ -5,14 +5,28 @@
         Cancelar
       </router-link>
 
-      <a class="button button--small button--outline" href="">Rascunho</a>
+      <button class="button button--small button--outline" href="">Rascunho</button>
 
-      <router-link :to="{name: 'Listing'}" class="button button--small button--primary">
+      <button @click="schedulePost" class="button button--small button--primary">
         Agendar
-      </router-link>
+      </button>
     </div>
   </footer>
 </template>
+
+<script>
+export default {
+  name: 'Footer',
+  props: {
+    post: Object,
+  },
+  methods: {
+    schedulePost() {
+      console.log(this.post);
+    },
+  },
+};
+</script>
 
 <style lang="scss" scoped>
 .footer {
