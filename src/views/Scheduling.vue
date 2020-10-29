@@ -7,8 +7,8 @@
         </div>
 
         <div class="card-content social-networks">
-          <i class="fab fa-instagram"></i>
-          <i class="fab fa-linkedin-in"></i>
+          <i class="fab fa-instagram" @click="selectSocialMidia('instagram')"></i>
+          <i class="fab fa-linkedin-in" @click="selectSocialMidia('linkedin')"></i>
           <i class="fab fa-youtube fab--is-disabled"></i>
           <i class="fab fa-pinterest fab--is-disabled"></i>
           <i class="fab fa-twitter fab--is-disabled"></i>
@@ -24,12 +24,12 @@
         <div class="card-content post-datetime">
           <div class="input-container">
             <i class="fas fa-calendar-alt icon"></i>
-            <input class="input-field" type="text" placeholder="DD/MM">
+            <input v-model="date" class="input-field" type="text" placeholder="DD/MM">
           </div>
 
           <div class="input-container">
             <i class="fas fa-clock icon"></i>
-            <input class="input-field" type="text" placeholder="HH:MM">
+            <input v-model="time" class="input-field" type="text" placeholder="HH:MM">
           </div>
         </div>
       </div>
@@ -40,7 +40,10 @@
         </div>
 
         <div class="card-content">
-          <textarea class="textarea" placeholder="Escreva uma legenda" name="text-post"></textarea>
+          <textarea
+          v-model="text"
+          class="textarea"
+          placeholder="Escreva uma legenda"></textarea>
         </div>
       </div>
 
@@ -56,7 +59,7 @@
               for="arquivo">
               Pesquisar imagens
             </label>
-            <input type="file" id="arquivo">
+            <input @change="uploadFile" type="file" id="arquivo">
           </div>
         </div>
       </div>
@@ -76,6 +79,24 @@ export default {
   name: 'Scheduling',
   components: {
     Footer,
+  },
+  data() {
+    return {
+      socialMedia: null,
+      date: null,
+      time: null,
+      text: '',
+      image: null,
+    };
+  },
+  methods: {
+    uploadFile({ target }) {
+      const [file] = target.files;
+      this.image = file;
+    },
+    selectSocialMidia(value) {
+      this.socialMedia = value;
+    },
   },
 };
 </script>
