@@ -22,7 +22,7 @@
           <img src="../assets/images/photo.jpg" alt="" />
         </td>
         <td class="table-text">
-          Aqui vai o texto descritivo desse post suiuiahdusa asihaIUSHAUsha SAUshAHSA
+          Aqui vai o texto descritivo desse post
         </td>
         <td>09/09/2020 às 14:45h</td>
         <td>
