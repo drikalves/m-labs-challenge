@@ -1,5 +1,5 @@
 .input-container {
-  border: 1px solid #949494;
+  border: 1px solid rgb(148, 148, 148);
   border-radius: 4px;
   display: flex;
   margin-bottom: 15px;
@@ -7,7 +7,7 @@
   
 .icon {
 	border: none;
-	color: #4F4F4F;
+	color: rgb(148, 148, 148);
 	min-width: 50px;
 	padding: 14px 10px;
 	text-align: center;
@@ -15,7 +15,7 @@
   
 .input-field {
 	border: none;
-  outline: none;
+  	outline: none;
 	padding: 10px;
 	padding-left: 0;
 	width: 100%;

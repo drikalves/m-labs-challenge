@@ -1,8 +1,8 @@
 // Base
 
 .fab {
-	background-color: white;
-	border: 1px solid #989898;
+	background-color: rgb(255, 255, 255);
+	border: 1px solid rgb(152, 152, 152);
 	padding: 8px;
 	width: 33px;
 	text-align: center;
@@ -10,9 +10,9 @@
 	border-radius: 50%;
 
 	&:hover {
-		background-color: #FFF3E0;
-		border-color: #EF9F2E;
-		color: #EF9F2E;
+		background-color: rgb(255, 243, 224);
+		border-color: rgb(239, 159, 46);
+		color: rgb(239, 159, 46);
 	}
 
 	&:disabled {
@@ -23,12 +23,12 @@
 // States
 
 .fab--is-disabled {
-	background-color: #DDDDDD;
-	border-color: #9E9E9E;
-	color: #989898;
+	background-color: rgb(221, 221, 221);
+	border-color: rgb(158, 158, 158);
+	color: rgb(152, 152, 152);
 	pointer-events: none;
 
 	& > * {
-		color: #989898;
+		color: rgb(152, 152, 152);
 	}
 }

@@ -19,26 +19,26 @@
 // Variants
 
 .button--primary {
-  background-color: #2F80ED;
-  color: #FFF;
+  background-color: rgb(47, 128, 237);
+  color: rgb(255, 255, 255);
 }
   
 .button--secondary {
-	background-color: #F2994A;
-  border-color: #E0812C;
-  color: #FFF;
+	background-color: rgb(242, 153, 74);
+  border-color: rgb(224, 129, 44);
+  color: rgb(255, 255, 255);
 }
   
 .button--tertiary {
   background-color: transparent;
   border-color: transparent;
-  color: #2F80ED;
+  color: rgb(47, 128, 237);
 }
 
 .button--outline {
   background-color: transparent;
-  border-color:#2F80ED;
-  color: #2F80ED;
+  border-color: rgb(47, 128, 237);
+  color: rgb(47, 128, 237);
 }
 
 // Sizes
@@ -63,12 +63,12 @@
 // States
 
 .button--is-disabled {
-  background-color: #DDDDDD;
+  background-color: rgb(221, 221, 221);
   border-color: transparent;
-  color: #989898;
+  color: rgb(152, 152, 152);
   pointer-events: none;
 
   & > * {
-    color: #DDDDDD;
+    color: rgb(221, 221, 221);
   }
 }

@@ -31,7 +31,7 @@ export default {
 <style lang="scss" scoped>
 .footer {
   align-items: center;
-  background-color: #FFF;
+  background-color: rgb(255, 255, 255);
   bottom: 0;
   left: 0;
   position: fixed;
