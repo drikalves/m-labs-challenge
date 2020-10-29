@@ -73,7 +73,7 @@
       <div class="modal__wrapper">
         <div class="modal__dialog">
           <div>
-            <img src="../assets/images/scheduling-post.jpg" />
+            <img src="../assets/images/emoji.png" />
             <p>Agendado com sucesso!</p>
           </div>
         </div>

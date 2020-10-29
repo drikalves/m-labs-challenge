@@ -16,7 +16,7 @@ export default {
 </script>
 
 <style lang="scss">
-@import './assets/stylesheets/application.scss';
+@import './assets/scss/index.scss';
 
 * {
   margin: 0;
