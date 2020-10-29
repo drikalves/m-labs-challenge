@@ -2,7 +2,7 @@ import Vue from 'vue';
 import VueRouter from 'vue-router';
 import Home from '../views/Home.vue';
 import Scheduling from '../views/Scheduling.vue';
-import Listing from '../views/Listing.vue';
+import SchedulingList from '../views/SchedulingList.vue';
 
 Vue.use(VueRouter);
 
@@ -19,8 +19,8 @@ const routes = [
   },
   {
     path: '/listagem',
-    name: 'Listing',
-    component: Listing,
+    name: 'SchedulingList',
+    component: SchedulingList,
   },
 ];
 
