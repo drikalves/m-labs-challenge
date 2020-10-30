@@ -93,7 +93,7 @@ export default {
     border-radius: 50%;
     color: rgb(255, 255, 255);
     display: flex;align-items: center;
-    font-size: 18px;
+    font-size: 16px;
     height: 32px;
     justify-content: center;
     width: 32px;

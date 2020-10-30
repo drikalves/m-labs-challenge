@@ -2,26 +2,26 @@
   <div class="scheduling">
     <form class="scheduling-form">
       <div class="m-card">
-        <div class="m-card-title">
+        <div class="m-card__title">
           Redes Sociais
         </div>
 
-        <div class="m-card-content social-networks">
-          <i class="fab fa-instagram" @click="selectSocialMidia('instagram')"></i>
-          <i class="fab fa-linkedin-in" @click="selectSocialMidia('linkedin')"></i>
-          <i class="fab fa-youtube fab--is-disabled"></i>
-          <i class="fab fa-pinterest fab--is-disabled"></i>
-          <i class="fab fa-twitter fab--is-disabled"></i>
-          <i class="fab fa-facebook-f fab--is-disabled"></i>
+        <div class="m-card__content scheduling__form--social">
+          <i class="m-button-social fab fa-instagram" @click="selectSocialMidia('instagram')"></i>
+          <i class="m-button-social fab fa-linkedin-in" @click="selectSocialMidia('linkedin')"></i>
+          <i class="m-button-social m-button-social--is-disabled fab fa-youtube"></i>
+          <i class="m-button-social m-button-social--is-disabled fab fa-pinterest"></i>
+          <i class="m-button-social m-button-social--is-disabled fab fa-twitter"></i>
+          <i class="m-button-social m-button-social--is-disabled fab fa-facebook-f"></i>
         </div>
       </div>
 
       <div class="m-card">
-        <div class="m-card-title"
+        <div class="m-card__title"
           >Data de publicação
         </div>
 
-        <div class="m-card-content post-datetime">
+        <div class="m-card__content scheduling__form--datetime">
           <div class="m-input-container">
             <i class="fas fa-calendar-alt m-icon"></i>
             <input v-model="post.date" class="m-input-field" type="text" placeholder="DD/MM">
@@ -35,11 +35,11 @@
       </div>
 
       <div class="m-card">
-        <div class="m-card-title">
+        <div class="m-card__title">
           Texto do post
         </div>
 
-        <div class="m-card-content">
+        <div class="m-card__content">
           <textarea
           v-model="post.text"
           class="m-textarea"
@@ -48,12 +48,12 @@
       </div>
 
       <div class="m-card">
-        <div class="m-card-title">
+        <div class="m-card__title">
           Upload de imagem
         </div>
 
-        <div class="m-card-content">
-          <div class="upload-image">
+        <div class="m-card__content">
+          <div class="scheduling__form--upload">
             <label
               class="m-button m-button--outline"
               for="arquivo">
@@ -134,33 +134,34 @@ export default {
   justify-content: center;
   padding: 17px 30px;
   width: 100%;
-}
 
-.social-networks {
-  justify-content: space-between;
-}
+  .scheduling__form--social {
+    justify-content: space-between;
+  }
 
-.post-datetime {
-  justify-content: space-between;
-}
+  .scheduling__form--datetime {
+    display: flex;
+    justify-content: space-between;
 
-.post-datetime > .m-input-container {
-  width: 45%;
-}
+    & > .m-input-container {
+      width: 45%;
+    }
+  }
 
-.upload-image {
-  border: 1px dashed #BDBDBD;
-  border-radius: 4px;
-  min-height: 80px;
-  width: 100%;
-}
+  .scheduling__form--upload {
+    border: 1px dashed rgb(189, 189, 189);
+    border-radius: 4px;
+    min-height: 80px;
+    width: 100%;
 
-.upload-image > label.m-button {
-  margin: 24px 43px;
-  font-weight: bold;
-}
+    & > label.m-button {
+      margin: 24px 40px;
+      font-weight: bold;
+    }
 
-.upload-image > input[type="file"] {
-  display: none;
+    & > input[type="file"] {
+      display: none;
+    }
+  }
 }
 </style>
