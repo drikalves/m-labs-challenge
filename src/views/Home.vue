@@ -1,10 +1,13 @@
 <template>
   <div class="home">
-    <figure class="home-image__container">
-      <img class="home-image" src="../assets/images/post-vector.svg" alt="post-illustration">
+    <figure class="home__image">
+      <img src="../assets/images/post-vector.svg" alt="post-illustration">
     </figure>
 
-    <router-link :to="{name: 'Scheduling'}" class="m-button m-button--large m-button--secondary">
+    <router-link :to="{name: 'Scheduling'}"
+      class="home__button
+      m-button
+      m-button--secondary">
       Agendar post
     </router-link>
   </div>
@@ -20,18 +23,19 @@ export default {
 
 <style lang="scss" scoped>
 .home {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
   align-items: center;
-}
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 
-.home-image__container {
-  margin-top: 85px;
-  margin-bottom: 50px;
-}
+  .home__image {
+    max-width: 100%;
+    margin-top: 85px;
+    margin-bottom: 50px;
+  }
 
-.home-image {
-  width: 100%;
+  .home__button {
+    width: 184px;
+  }
 }
 </style>

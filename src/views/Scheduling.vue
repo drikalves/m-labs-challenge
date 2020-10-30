@@ -1,27 +1,31 @@
 <template>
   <div class="scheduling">
     <form class="scheduling-form">
-      <div class="m-card">
-        <div class="m-card__title">
-          Redes Sociais
+      <Card :title="'Redes Sociais'">
+        <div class="scheduling__form--social">
+          <span class="m-button-social">
+            <i class="fab fa-instagram" @click="selectSocialMidia('instagram')"></i>
+          </span>
+          <span class="m-button-social">
+            <i class="fab fa-linkedin-in" @click="selectSocialMidia('linkedin')"></i>
+          </span>
+          <span class="m-button-social m-button-social--is-disabled ">
+            <i class="fab fa-youtube"></i>
+          </span>
+          <span class="m-button-social m-button-social--is-disabled">
+            <i class="fab fa-pinterest"></i>
+          </span>
+          <span class="m-button-social m-button-social--is-disabled">
+            <i class="fab fa-twitter"></i>
+          </span>
+          <span class="m-button-social m-button-social--is-disabled">
+            <i class="fab fa-facebook-f"></i>
+          </span>
         </div>
+      </Card>
 
-        <div class="m-card__content scheduling__form--social">
-          <i class="m-button-social fab fa-instagram" @click="selectSocialMidia('instagram')"></i>
-          <i class="m-button-social fab fa-linkedin-in" @click="selectSocialMidia('linkedin')"></i>
-          <i class="m-button-social m-button-social--is-disabled fab fa-youtube"></i>
-          <i class="m-button-social m-button-social--is-disabled fab fa-pinterest"></i>
-          <i class="m-button-social m-button-social--is-disabled fab fa-twitter"></i>
-          <i class="m-button-social m-button-social--is-disabled fab fa-facebook-f"></i>
-        </div>
-      </div>
-
-      <div class="m-card">
-        <div class="m-card__title"
-          >Data de publicação
-        </div>
-
-        <div class="m-card__content scheduling__form--datetime">
+      <Card :title="'Data de publicação'">
+        <div class="scheduling__form--datetime">
           <div class="m-input-container">
             <i class="fas fa-calendar-alt m-icon"></i>
             <input v-model="post.date" class="m-input-field" type="text" placeholder="DD/MM">
@@ -32,37 +36,26 @@
             <input v-model="post.time" class="m-input-field" type="text" placeholder="HH:MM">
           </div>
         </div>
-      </div>
+      </Card>
 
-      <div class="m-card">
-        <div class="m-card__title">
-          Texto do post
-        </div>
-
-        <div class="m-card__content">
-          <textarea
+      <Card :title="'Texto do post'">
+        <textarea
           v-model="post.text"
           class="m-textarea"
-          placeholder="Escreva uma legenda"></textarea>
-        </div>
-      </div>
+          placeholder="Escreva uma legenda">
+        </textarea>
+      </Card>
 
-      <div class="m-card">
-        <div class="m-card__title">
-          Upload de imagem
+      <Card :title="'Upload de imagem'">
+        <div class="scheduling__form--upload">
+          <label
+            class="m-button m-button--outline"
+            for="arquivo">
+            Pesquisar imagens
+          </label>
+          <input @change="uploadFile" type="file" id="arquivo">
         </div>
-
-        <div class="m-card__content">
-          <div class="scheduling__form--upload">
-            <label
-              class="m-button m-button--outline"
-              for="arquivo">
-              Pesquisar imagens
-            </label>
-            <input @change="uploadFile" type="file" id="arquivo">
-          </div>
-        </div>
-      </div>
+      </Card>
 
       <button class="m-button m-button--large m-button--secondary m-button--block" href="">
         Visualizar post
@@ -92,11 +85,13 @@
 
 <script>
 import Footer from '@/components/scheduling/Footer.vue';
+import Card from '@/components/scheduling/Card.vue';
 
 export default {
   name: 'Scheduling',
   components: {
     Footer,
+    Card,
   },
   data() {
     return {
@@ -130,18 +125,20 @@ export default {
   align-items: center;
   display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
   justify-content: center;
   padding: 17px 30px;
   width: 100%;
 
   .scheduling__form--social {
+    display: flex;
     justify-content: space-between;
+    width: 100%;
   }
 
   .scheduling__form--datetime {
     display: flex;
     justify-content: space-between;
+    width: 100%;
 
     & > .m-input-container {
       width: 45%;
