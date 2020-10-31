@@ -7,6 +7,7 @@
     <router-link :to="{name: 'Scheduling'}"
       class="home__button
       m-button
+      m-button--large
       m-button--secondary">
       Agendar post
     </router-link>

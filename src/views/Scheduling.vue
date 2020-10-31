@@ -35,7 +35,7 @@
       <Card :title="'Upload de imagem'">
         <div class="scheduling__form-upload">
           <label
-            class="m-button m-button--outline"
+            class="m-button m-button--large m-button--outline"
             for="arquivo">
             Pesquisar imagens
           </label>
@@ -49,12 +49,12 @@
       </Card>
 
       <button class="scheduling__preview-button
-          m-button
-          m-button--large
-          m-button--secondary
-          m-button--block" href="">
-          Visualizar post
-        </button>
+        m-button
+        m-button--large
+        m-button--secondary
+        m-button--block" href="">
+        Visualizar post
+      </button>
     </section>
 
     <Footer :post="post" />
@@ -98,16 +98,19 @@ export default {
 .scheduling {
   display: flex;
   flex-direction: column;
-  padding-bottom: 16px;
-  padding-left: 32px;
-  padding-right: 32px;
+  padding-bottom: 80px;
+  padding-left: 24px;
+  padding-right: 24px;
   padding-top: 16px;
 
   @media only screen and (min-width: 961px) {
+    padding-bottom: 104px;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 40px;
     flex-direction: row;
 
     & > section {
-      height: 100%;
       width: 50%;
       margin-right: 40px;
 
@@ -115,12 +118,6 @@ export default {
         margin: 0;
       }
     }
-  }
-}
-
-.scheduling__preview-button {
-  @media only screen and (min-width: 961px) {
-    display: none;
   }
 }
 
@@ -164,14 +161,33 @@ export default {
   .scheduling__form-upload {
     border: 1px dashed rgb(189, 189, 189);
     border-radius: 4px;
+    padding: 24px 32px;
     width: 100%;
 
-    & > label.m-button {
-      margin: 24px 40px;
-      font-weight: bold;
+    & > input[type="file"] {
+      display: none;
     }
 
-    & > input[type="file"] {
+    .m-button {
+      padding: 8px;
+    }
+  }
+}
+
+.scheduling__preview {
+
+  .scheduling__preview-post {
+    display: none;
+
+    @media only screen and (min-width: 961px) {
+      display: flex;
+    }
+  }
+
+  .scheduling__preview-button {
+    margin-top: 16px;
+
+    @media only screen and (min-width: 961px) {
       display: none;
     }
   }

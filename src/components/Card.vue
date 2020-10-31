@@ -25,6 +25,9 @@ export default {
   border: 1px solid rgb(224, 224, 224);
   border-radius: 4px;
   color: rgb(51, 51, 51);
+  display: flex;
+  flex-direction: column;
+
   font-family: Poppins, Arial, sans-serif;
   width: 100%;
 
@@ -36,7 +39,7 @@ export default {
   }
 
   .m-card__content {
-    padding: 24px;
+    padding: 18px;
   }
 }
 </style>
