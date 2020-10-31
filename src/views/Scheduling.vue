@@ -1,8 +1,8 @@
 <template>
   <div class="scheduling">
-    <form class="scheduling-form">
+    <section class="scheduling__form">
       <Card :title="'Redes Sociais'">
-        <div class="scheduling__form--social">
+        <div class="scheduling__form-social">
           <span class="m-button-social">
             <i class="fab fa-instagram" @click="selectSocialMidia('instagram')"></i>
           </span>
@@ -24,21 +24,7 @@
         </div>
       </Card>
 
-      <Card :title="'Data de publicação'">
-        <div class="scheduling__form--datetime">
-          <div class="m-input-container">
-            <i class="fas fa-calendar-alt m-icon"></i>
-            <input v-model="post.date" class="m-input-field" type="text" placeholder="DD/MM">
-          </div>
-
-          <div class="m-input-container">
-            <i class="fas fa-clock m-icon"></i>
-            <input v-model="post.time" class="m-input-field" type="text" placeholder="HH:MM">
-          </div>
-        </div>
-      </Card>
-
-      <Card :title="'Texto do post'">
+      <Card class="scheduling__form-post-text" :title="'Texto do post'">
         <textarea
           v-model="post.text"
           class="m-textarea"
@@ -47,7 +33,7 @@
       </Card>
 
       <Card :title="'Upload de imagem'">
-        <div class="scheduling__form--upload">
+        <div class="scheduling__form-upload">
           <label
             class="m-button m-button--outline"
             for="arquivo">
@@ -56,28 +42,20 @@
           <input @change="uploadFile" type="file" id="arquivo">
         </div>
       </Card>
+    </section>
 
-      <button class="m-button m-button--large m-button--secondary m-button--block" href="">
-        Visualizar post
-      </button>
-    </form>
+    <section class="scheduling__preview">
+      <Card class="scheduling__preview-post" :title="'Visualização do post'">
+      </Card>
 
-    <!-- <div class="m-modal m-modal--is-open" aria-modal="true">
-      <div class="m-modal__wrapper">
-        <div class="m-modal__dialog">
-          <div>
-            <img src="../assets/images/emoji.png" />
-            <p>Agendado com sucesso!</p>
-          </div>
-        </div>
-        <button
-            class="m-button
-            m-button--primary
-            m-button--large">
-            OK
-          </button>
-      </div>
-    </div> -->
+      <button class="scheduling__preview-button
+          m-button
+          m-button--large
+          m-button--secondary
+          m-button--block" href="">
+          Visualizar post
+        </button>
+    </section>
 
     <Footer :post="post" />
   </div>
@@ -85,7 +63,7 @@
 
 <script>
 import Footer from '@/components/scheduling/Footer.vue';
-import Card from '@/components/scheduling/Card.vue';
+import Card from '@/components/Card.vue';
 
 export default {
   name: 'Scheduling',
@@ -118,37 +96,74 @@ export default {
 
 <style lang="scss" scoped>
 .scheduling {
-  padding-bottom: 80px;
-}
-
-.scheduling-form {
-  align-items: center;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  padding: 17px 30px;
-  width: 100%;
+  padding-bottom: 16px;
+  padding-left: 32px;
+  padding-right: 32px;
+  padding-top: 16px;
 
-  .scheduling__form--social {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-  }
+  @media only screen and (min-width: 961px) {
+    flex-direction: row;
 
-  .scheduling__form--datetime {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
+    & > section {
+      height: 100%;
+      width: 50%;
+      margin-right: 40px;
 
-    & > .m-input-container {
-      width: 45%;
+      &:last-of-type {
+        margin: 0;
+      }
     }
   }
+}
 
-  .scheduling__form--upload {
+.scheduling__preview-button {
+  @media only screen and (min-width: 961px) {
+    display: none;
+  }
+}
+
+.scheduling__form {
+  display: flex;
+  flex-direction: column;
+
+  .m-card {
+    margin-bottom: 16px;
+
+    @media only screen and (min-width: 961px) {
+      margin-bottom: 40px;
+    }
+
+    &:last-of-type {
+      margin: 0;
+    }
+  }
+  .scheduling__form-social {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  // .scheduling__datetime-card {
+  //   display: flex;
+  //   justify-content: space-between;
+  //   width: 100%;
+
+  //   & > .m-input-container {
+  //     width: 45%;
+  //   }
+
+  //   @media screen and (min-width: 960px){
+  //     min-height: 110px;
+  //     min-width: 315px;
+  //   }
+  // }
+
+  .scheduling__form-upload {
     border: 1px dashed rgb(189, 189, 189);
     border-radius: 4px;
-    min-height: 80px;
     width: 100%;
 
     & > label.m-button {

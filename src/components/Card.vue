@@ -26,7 +26,6 @@ export default {
   border-radius: 4px;
   color: rgb(51, 51, 51);
   font-family: Poppins, Arial, sans-serif;
-  margin-bottom: 16px;
   width: 100%;
 
   .m-card__title {

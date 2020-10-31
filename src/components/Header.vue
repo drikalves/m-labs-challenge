@@ -1,11 +1,13 @@
 <template>
   <header class="header">
-    <div>
-      <i class="fas fa-bars fa-2x"></i>
-    </div>
+    <i class="header__bars fas fa-bars fa-2x"></i>
+    <img class="header__logo"
+      src="../assets/images/mlabs-logo.png"
+      alt="logo">
 
-    <div>
-      <img src="../assets/images/Avatar.svg" alt="Avatar">
+    <div class="header__user">
+      <img class="header__user-avatar" src="../assets/images/Avatar.svg" alt="avatar">
+      <p class="header__user-name">Anselmo Carlos</p>
     </div>
   </header>
 </template>
@@ -15,10 +17,48 @@
   align-items: center;
   background: rgb(255, 255, 255);
   display: flex;
-  padding-bottom: 18px;
-  padding-left: 20px;
-  padding-top: 18px;
-  padding-right: 20px;
+  padding-bottom: 16px;
+  padding-left: 24px;
+  padding-top: 16px;
+  padding-right: 24px;
   justify-content: space-between;
+  height: 80px;
+
+  .header__logo {
+    display: none;
+
+    @media only screen and (min-width: 961px) {
+      display: flex;
+      width: 115px;
+    }
+  }
+
+  .header__bars {
+    @media only screen and (min-width: 961px) {
+      display: none;
+    }
+  }
+
+  .header__user {
+    display: flex;
+
+    .header__user-avatar {
+      width: 45px;
+    }
+
+    .header__user-name {
+      display: none;
+
+      @media only screen and (min-width: 961px) {
+        align-items: center;
+        display: flex;
+        color: rgb(0, 0, 0);
+        font-family: Poppins, Arial, sans-serif;
+        font-size: 14px;
+        font-weight: bold;
+        margin-left: 8px;
+      }
+    }
+  }
 }
 </style>
