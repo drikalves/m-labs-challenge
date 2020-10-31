@@ -1,28 +1,39 @@
 <template>
   <div class="scheduling">
     <section class="scheduling__form">
-      <Card :title="'Redes Sociais'">
-        <div class="scheduling__form-social">
-          <span class="m-button-social">
-            <i class="fab fa-instagram" @click="selectSocialMidia('instagram')"></i>
-          </span>
-          <span class="m-button-social">
-            <i class="fab fa-linkedin-in" @click="selectSocialMidia('linkedin')"></i>
-          </span>
-          <span class="m-button-social m-button-social--is-disabled ">
-            <i class="fab fa-youtube"></i>
-          </span>
-          <span class="m-button-social m-button-social--is-disabled">
-            <i class="fab fa-pinterest"></i>
-          </span>
-          <span class="m-button-social m-button-social--is-disabled">
-            <i class="fab fa-twitter"></i>
-          </span>
-          <span class="m-button-social m-button-social--is-disabled">
-            <i class="fab fa-facebook-f"></i>
-          </span>
-        </div>
-      </Card>
+      <div class="scheduling__form-container">
+        <Card :title="'Redes Sociais'">
+          <div class="scheduling__form-social">
+            <span class="m-button-social">
+              <i class="fab fa-instagram" @click="selectSocialMidia('instagram')"></i>
+            </span>
+            <span class="m-button-social">
+              <i class="fab fa-linkedin-in" @click="selectSocialMidia('linkedin')"></i>
+            </span>
+            <span class="m-button-social m-button-social--is-disabled ">
+              <i class="fab fa-youtube"></i>
+            </span>
+            <span class="m-button-social m-button-social--is-disabled">
+              <i class="fab fa-pinterest"></i>
+            </span>
+            <span class="m-button-social m-button-social--is-disabled">
+              <i class="fab fa-twitter"></i>
+            </span>
+            <span class="m-button-social m-button-social--is-disabled">
+              <i class="fab fa-facebook-f"></i>
+            </span>
+          </div>
+        </Card>
+
+        <Card :title="'Data de publicação'">
+          <div class="scheduling__form-datetime">
+            <button class="m-button m-button--secondary"> oi babaca
+            </button>
+            <button class="m-button m-button--secondary"> troxa
+            </button>
+          </div>
+        </Card>
+      </div>
 
       <Card class="scheduling__form-post-text" :title="'Texto do post'">
         <textarea
@@ -131,32 +142,37 @@ export default {
     @media only screen and (min-width: 961px) {
       margin-bottom: 40px;
     }
+  }
 
-    &:last-of-type {
-      margin: 0;
+  .scheduling__form-container {
+    @media only screen and (min-width: 961px) {
+      display: flex;
+      flex-direction: row;
+      margin-bottom: 40px;
+
+      .m-card {
+        margin-bottom: 0px;
+        margin-right: 40px;
+
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+    }
+
+    .scheduling__form-social {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      width: 100%;
+    }
+
+    .scheduling__form-datetime {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
     }
   }
-  .scheduling__form-social {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    width: 100%;
-  }
-
-  // .scheduling__datetime-card {
-  //   display: flex;
-  //   justify-content: space-between;
-  //   width: 100%;
-
-  //   & > .m-input-container {
-  //     width: 45%;
-  //   }
-
-  //   @media screen and (min-width: 960px){
-  //     min-height: 110px;
-  //     min-width: 315px;
-  //   }
-  // }
 
   .scheduling__form-upload {
     border: 1px dashed rgb(189, 189, 189);
@@ -185,8 +201,6 @@ export default {
   }
 
   .scheduling__preview-button {
-    margin-top: 16px;
-
     @media only screen and (min-width: 961px) {
       display: none;
     }
