@@ -56,7 +56,17 @@
     </section>
 
     <section class="scheduling__preview">
-      <Card class="scheduling__preview-post" :title="'Visualização do post'">
+      <Card class="scheduling__preview__post" title="Visualização do post">
+        <div class="scheduling__preview__post__default">
+          <p class="scheduling__preview__post__default__text">
+            Aguardando conteúdo. Informe os canais e as mídias desejadas para visualização.
+          </p>
+
+          <figure>
+            <img src="../assets/images/preview-default.png" alt="Imagem default">
+          </figure>
+        </div>
+        <!-- <PostInstagram /> -->
       </Card>
 
       <button class="scheduling__preview-button
@@ -75,12 +85,14 @@
 <script>
 import Footer from '@/components/scheduling/Footer.vue';
 import Card from '@/components/Card.vue';
+// import PostInstagram from '@/components/PostInstagram.vue';
 
 export default {
   name: 'Scheduling',
   components: {
     Footer,
     Card,
+    // PostInstagram,
   },
   data() {
     return {
@@ -122,8 +134,8 @@ export default {
     flex-direction: row;
 
     & > section {
-      width: 50%;
       margin-right: 40px;
+      width: 50%;
 
       &:last-of-type {
         margin: 0;
@@ -191,8 +203,9 @@ export default {
 }
 
 .scheduling__preview {
+  min-height: 100%;
 
-  .scheduling__preview-post {
+  .scheduling__preview__post {
     display: none;
 
     @media only screen and (min-width: 961px) {
@@ -204,6 +217,19 @@ export default {
     @media only screen and (min-width: 961px) {
       display: none;
     }
+  }
+}
+
+.scheduling__preview__post__default {
+  padding-bottom: 46px;
+  padding-top: 46px;
+  text-align: center;
+
+  .scheduling__preview__post__default__text {
+    color: rgb(130, 130, 130);
+    font-size: 16px;
+    margin-bottom: 40px;
+    text-align: center;
   }
 }
 </style>

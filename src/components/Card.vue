@@ -27,14 +27,12 @@ export default {
   color: rgb(51, 51, 51);
   display: flex;
   flex-direction: column;
-
   font-family: Poppins, Arial, sans-serif;
   width: 100%;
 
   .m-card__title {
     border-bottom: 1px solid rgb(224, 224, 224);
     font-size: 16px;
-    font-weight: bold;
     padding: 8px;
   }
 
