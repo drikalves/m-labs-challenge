@@ -7,7 +7,7 @@
 
       <button class="m-button m-button--outline" href="">Rascunho</button>
 
-      <button @click="schedulePost(post)" class="m-button m-button--primary">
+      <button @click="schedule()" class="m-button m-button--primary">
         Agendar
       </button>
     </div>
@@ -22,8 +22,24 @@ export default {
   props: {
     post: Object,
   },
+  computed: {
+    isValidPost() {
+      return this.post.socialMedia !== null
+      && this.post.date !== null
+      && this.post.time !== null
+      && this.post.text !== null
+      && this.post.image !== null;
+    },
+  },
   methods: {
     ...mapActions(['schedulePost']),
+    schedule() {
+      console.log(this.isValidPost);
+      if (this.isValidPost) {
+        this.schedulePost(this.post);
+        this.$router.push({ name: 'SchedulingList' });
+      }
+    },
   },
 };
 </script>

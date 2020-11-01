@@ -128,13 +128,30 @@ export default {
         time: null,
         text: '',
         image: null,
+        status: 'scheduled',
       },
     };
   },
   methods: {
-    uploadFile({ target }) {
-      const [file] = target.files;
-      this.post.image = file;
+    uploadFile(event) {
+      const input = event.target;
+      if (input.files && input.files[0]) {
+        const reader = new FileReader();
+        reader.onload = (e) => {
+          this.post.image = e.target.result;
+        };
+        reader.readAsDataURL(input.files[0]);
+      }
+    },
+    previewImage(event) {
+      const input = event.target;
+      if (input.files && input.files[0]) {
+        const reader = new FileReader();
+        reader.onload = (e) => {
+          this.imageData = e.target.result;
+        };
+        reader.readAsDataURL(input.files[0]);
+      }
     },
     selectSocialMidia(value) {
       this.post.socialMedia = value;
