@@ -17,8 +17,14 @@ export default new Vuex.Store({
     ],
   },
   mutations: {
+    schedulePost(state, post) {
+      state.schedulePosts.push(post);
+    },
   },
   actions: {
+    schedulePost({ commit }, post) {
+      commit('schedulePost', post);
+    },
   },
   modules: {
   },

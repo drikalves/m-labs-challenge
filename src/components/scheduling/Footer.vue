@@ -7,7 +7,7 @@
 
       <button class="m-button m-button--outline" href="">Rascunho</button>
 
-      <button @click="schedulePost" class="m-button m-button--primary">
+      <button @click="schedulePost(post)" class="m-button m-button--primary">
         Agendar
       </button>
     </div>
@@ -15,15 +15,15 @@
 </template>
 
 <script>
+import { mapActions } from 'vuex';
+
 export default {
   name: 'Footer',
   props: {
     post: Object,
   },
   methods: {
-    schedulePost() {
-      console.log(this.post);
-    },
+    ...mapActions(['schedulePost']),
   },
 };
 </script>

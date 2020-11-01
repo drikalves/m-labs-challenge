@@ -9,6 +9,7 @@
         <th>Ações</th>
         <th>Status</th>
       </tr>
+
       <tr v-for="(post, index) in schedulePosts" :key="index">
         <td>
           <i v-if="post.socialMedia === 'instagram'"
@@ -72,9 +73,7 @@ import { mapState } from 'vuex';
 export default {
   name: 'SchedulingList',
   components: {},
-  computed: {
-    ...mapState(['schedulePosts']),
-  },
+  computed: mapState(['schedulePosts']),
 };
 </script>
 
