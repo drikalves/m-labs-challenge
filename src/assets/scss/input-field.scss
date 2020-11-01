@@ -1,22 +1,25 @@
-.m-input-container {
+.m-input {
   border: 1px solid rgb(148, 148, 148);
   border-radius: 4px;
-  display: flex;
-  margin-bottom: 15px;
-}
-  
-.m-icon {
-	border: none;
-	color: rgb(148, 148, 148);
-	min-width: 50px;
-	padding: 14px 10px;
-	text-align: center;
-}
-  
-.m-input-field {
-	border: none;
-  	outline: none;
-	padding: 10px;
-	padding-left: 0;
+	display: flex;
 	width: 100%;
+	
+	.m-input__icon {
+		border: none;
+		color: rgb(148, 148, 148);
+		font-size: 12px;
+		padding-bottom: 14px;
+		padding-left: 10px;
+		padding-right: 10px;
+		padding-top: 14px;
+		text-align: center;
+	}
+	
+	.m-input__field {
+		border: none;
+		outline: none;
+		padding: 10px;
+		padding-left: 0;
+		width: 100%;
+	}	
 }

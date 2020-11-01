@@ -27,15 +27,20 @@
 
         <Card :title="'Data de publicação'">
           <div class="scheduling__form-datetime">
-            <button class="m-button m-button--secondary"> text1
-            </button>
-            <button class="m-button m-button--secondary"> text2
-            </button>
+            <div class="m-input">
+              <i class="m-input__icon fas fa-calendar-alt"></i>
+              <input class="m-input__field" type="text" placeholder="DD/MM" name="date">
+            </div>
+
+            <div class="m-input">
+              <i class="m-input__icon fas fa-clock m-icon"></i>
+              <input class="m-input__field" type="text" placeholder="DD/MM" name="date">
+            </div>
           </div>
         </Card>
       </div>
 
-      <Card class="scheduling__form-post-text" :title="'Texto do post'">
+      <Card :title="'Texto do post'">
         <textarea
           v-model="post.text"
           class="m-textarea"
@@ -44,9 +49,15 @@
       </Card>
 
       <Card :title="'Upload de imagem'">
-        <div class="scheduling__form-upload">
+        <div class="scheduling__form__upload">
+          <i class="scheduling__form__upload__icon fas fa-cloud-upload-alt"></i>
+
+          <p class="scheduling__form__upload__text">
+            Arraste e solte uma imagem aqui ou clique no botão abaixo
+          </p>
+
           <label
-            class="m-button m-button--large m-button--outline"
+            class="scheduling__form__upload__button m-button m-button--large m-button--outline"
             for="arquivo">
             Pesquisar imagens
           </label>
@@ -133,13 +144,13 @@ export default {
 
   @media only screen and (min-width: 961px) {
     padding-bottom: 104px;
-    padding-left: 40px;
-    padding-right: 40px;
-    padding-top: 40px;
+    padding-left: 32px;
+    padding-right: 32px;
+    padding-top: 32px;
     flex-direction: row;
 
     & > section {
-      margin-right: 40px;
+      margin-right: 32px;
       width: 50%;
 
       &:last-of-type {
@@ -157,7 +168,7 @@ export default {
     margin-bottom: 16px;
 
     @media only screen and (min-width: 961px) {
-      margin-bottom: 40px;
+      margin-bottom: 32px;
     }
   }
 
@@ -165,11 +176,11 @@ export default {
     @media only screen and (min-width: 961px) {
       display: flex;
       flex-direction: row;
-      margin-bottom: 40px;
+      margin-bottom: 32px;
 
       .m-card {
         margin-bottom: 0px;
-        margin-right: 40px;
+        margin-right: 32px;
 
         &:last-child {
           margin-right: 0;
@@ -186,23 +197,50 @@ export default {
 
     .scheduling__form-datetime {
       display: flex;
-      justify-content: space-between;
       width: 100%;
+
+      .m-input:first-of-type {
+        margin-right: 30px;
+      }
     }
   }
 
-  .scheduling__form-upload {
+  .scheduling__form__upload {
     border: 1px dashed rgb(189, 189, 189);
     border-radius: 4px;
+    color: rgb(130, 130, 130);
     padding: 24px 32px;
+    text-align: center;
     width: 100%;
 
     & > input[type="file"] {
       display: none;
     }
 
-    .m-button {
-      padding: 8px;
+    .scheduling__form__upload__icon {
+      display: none;
+
+      @media only screen and (min-width: 961px) {
+        display: block;
+        font-size: 45px;
+        margin-bottom: 20px;
+      }
+    }
+
+    .scheduling__form__upload__text {
+      display: none;
+
+      @media only screen and (min-width: 961px) {
+        display: block;
+        font-size: 16px;
+        margin-bottom: 20px;
+      }
+    }
+
+    .scheduling__form__upload__button {
+      display: inline;
+      font-size: 16px;
+      max-width: 180px;
     }
   }
 }
@@ -216,25 +254,27 @@ export default {
     @media only screen and (min-width: 961px) {
       display: flex;
     }
+
+    .scheduling__preview__post__default {
+      padding-bottom: 46px;
+      padding-top: 46px;
+      text-align: center;
+
+      .scheduling__preview__post__default__text {
+        color: rgb(130, 130, 130);
+        font-size: 16px;
+        margin-bottom: 40px;
+        text-align: center;
+      }
+    }
   }
 
   .scheduling__preview-button {
+    font-size: 16px;
+
     @media only screen and (min-width: 961px) {
       display: none;
     }
-  }
-}
-
-.scheduling__preview__post__default {
-  padding-bottom: 46px;
-  padding-top: 46px;
-  text-align: center;
-
-  .scheduling__preview__post__default__text {
-    color: rgb(130, 130, 130);
-    font-size: 16px;
-    margin-bottom: 40px;
-    text-align: center;
   }
 }
 </style>

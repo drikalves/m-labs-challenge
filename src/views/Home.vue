@@ -28,15 +28,16 @@ export default {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  padding-bottom: 64px;
 
   .home__image {
     max-width: 100%;
-    margin-top: 85px;
+    margin-top: 84px;
     margin-bottom: 50px;
   }
 
   .home__button {
-    width: 184px;
+    min-width: 184px;
   }
 }
 </style>
