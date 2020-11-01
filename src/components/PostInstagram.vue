@@ -22,7 +22,7 @@
 
         <i class="far fa-bookmark"></i>
       </div>
-      <p>Aqui vai o texto descritivo desse post</p>
+      <p class="post-instagram__footer__text">Aqui vai o texto descritivo desse post</p>
     </div>
   </div>
 </template>
@@ -46,9 +46,10 @@ export default {
 
   .post-instagram__header {
     display: flex;
-    padding-bottom: 20px;
-    padding-left: 16px;
-    padding-top: 16px;
+    padding-bottom: 14px;
+    padding-left: 14px;
+    padding-right: 14px;
+    padding-top: 14px;
 
     .post-instagram__header__logo {
       margin-right: 12px;
@@ -73,10 +74,10 @@ export default {
   .post-instagram__footer {
     display: flex;
     flex-direction: column;
-    padding-bottom: 16px;
-    padding-left: 16px;
+    padding-bottom: 20px;
+    padding-left: 14px;
     padding-top: 10px;
-    padding-right: 16px;
+    padding-right: 14px;
 
     .post-instagram__footer__actions {
       display: flex;
@@ -84,7 +85,7 @@ export default {
       margin-bottom: 12px;
 
       div > .far:first-of-type {
-        margin-right: 16px;
+        margin-right: 14px;
       }
 
       .far {

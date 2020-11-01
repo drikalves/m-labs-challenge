@@ -27,9 +27,9 @@
 
         <Card :title="'Data de publicação'">
           <div class="scheduling__form-datetime">
-            <button class="m-button m-button--secondary"> oi babaca
+            <button class="m-button m-button--secondary"> text1
             </button>
-            <button class="m-button m-button--secondary"> troxa
+            <button class="m-button m-button--secondary"> text2
             </button>
           </div>
         </Card>
@@ -66,7 +66,10 @@
             <img src="../assets/images/preview-default.png" alt="Imagem default">
           </figure>
         </div>
+
         <!-- <PostInstagram /> -->
+
+        <!-- <PostLinkedin /> -->
       </Card>
 
       <button class="scheduling__preview-button
@@ -86,6 +89,7 @@
 import Footer from '@/components/scheduling/Footer.vue';
 import Card from '@/components/Card.vue';
 // import PostInstagram from '@/components/PostInstagram.vue';
+// import PostLinkedin from '@/components/PostLinkedin.vue';
 
 export default {
   name: 'Scheduling',
@@ -93,6 +97,7 @@ export default {
     Footer,
     Card,
     // PostInstagram,
+    // PostLinkedin,
   },
   data() {
     return {
