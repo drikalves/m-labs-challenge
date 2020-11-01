@@ -9,61 +9,56 @@
         <th>Ações</th>
         <th>Status</th>
       </tr>
-
-      <tr>
+      <tr v-for="(post, index) in schedulePosts" :key="index">
         <td>
-          <i class="scheduling-list__icon
-            schedule-list__icon--instagram
-            fab
-            fa-instagram">
+          <i v-if="post.socialMedia === 'instagram'"
+            class="scheduling-list__icon schedule-list__icon--instagram fab fa-instagram">
+          </i>
+          <i v-else-if="post.socialMedia === 'linkedin'"
+            class="scheduling-list__icon schedule-list__icon--linkedin fab fa-linkedin-in">
           </i>
         </td>
         <td>
-          <img class="scheduling-list__midia" src="../assets/images/photo1.jpg" alt="" />
+          <img class="scheduling-list__midia" :src="post.image" alt="" />
         </td>
         <td>
-          <p class="scheduling-list__text">Aqui vai o texto descritivo desse post</p>
+          <p class="scheduling-list__text">
+            {{ post.text }}
+          </p>
         </td>
         <td>
-          <p>09/09/2020 às 14:45h</p>
+          <p>{{ post.date }} às {{ post.time }}</p>
         </td>
         <td>
           <a href="">Preview</a>
         </td>
         <td>
-          <div class="scheduling-list__status">
+          <div v-if="post.status === 'scheduled'" class="scheduling-list__status">
             <div class="scheduling-list__status-badge
-            scheduling-list__status-badge--is-scheduled">
+              scheduling-list__status-badge--is-scheduled">
             </div>
             <p>Agendado</p>
           </div>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <i class="scheduling-list__icon
-            schedule-list__icon--linkedin-in
-            fab fa-linkedin-in"></i>
-        </td>
-        <td>
-          <img class="scheduling-list__midia" src="../assets/images/photo2.jpg" alt="" />
-        </td>
-        <td>
-          <p class="scheduling-list__text">Amet minim mollit non deserunt ullamco est sit
-            aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.</p>
-        </td>
-        <td>
-          <p>09/09/2020 às 14:45h</p>
-        </td>
-        <td>
-          <a href="">Preview</a>
-        </td>
-        <td>
-          <div class="scheduling-list__status">
+
+          <div v-else-if="post.status === 'posted'" class="scheduling-list__status">
             <div class="scheduling-list__status-badge
-            scheduling-list__status-badge--is-posted">
+              scheduling-list__status-badge--is-posted">
             </div>
             <p>Postado</p>
+          </div>
+
+          <div v-else-if="post.status === 'parcial-posted'" class="scheduling-list__status">
+            <div class="scheduling-list__status-badge
+              scheduling-list__status-badge--parcial-posted">
+            </div>
+            <p>Postado com ressalvas</p>
+          </div>
+
+          <div v-else class="scheduling-list__status">
+            <div class="scheduling-list__status-badge
+              scheduling-list__status-badge--not-approved">
+            </div>
+            <p>Não aprovado</p>
           </div>
         </td>
       </tr>
@@ -72,9 +67,14 @@
 </template>
 
 <script>
+import { mapState } from 'vuex';
+
 export default {
   name: 'SchedulingList',
   components: {},
+  computed: {
+    ...mapState(['schedulePosts']),
+  },
 };
 </script>
 
@@ -102,7 +102,7 @@ export default {
       background-color: rgb(214, 15, 134);
     }
 
-    &.schedule-list__icon--linkedin-in {
+    &.schedule-list__icon--linkedin {
       background-color: rgb(58, 112, 218);
     }
   }

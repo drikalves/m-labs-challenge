@@ -29,12 +29,22 @@
           <div class="scheduling__form-datetime">
             <div class="m-input">
               <i class="m-input__icon fas fa-calendar-alt"></i>
-              <input class="m-input__field" type="text" placeholder="DD/MM" name="date">
+
+              <input v-model="post.date"
+                class="m-input__field"
+                type="text"
+                placeholder="DD/MM"
+                name="date">
             </div>
 
             <div class="m-input">
               <i class="m-input__icon fas fa-clock m-icon"></i>
-              <input class="m-input__field" type="text" placeholder="DD/MM" name="date">
+
+              <input v-model="post.time"
+                class="m-input__field"
+                type="text"
+                placeholder="HH:MM"
+                name="time">
             </div>
           </div>
         </Card>
@@ -233,7 +243,7 @@ export default {
       @media only screen and (min-width: 961px) {
         display: block;
         font-size: 16px;
-        margin-bottom: 20px;
+        margin-bottom: 24px;
       }
     }
 
