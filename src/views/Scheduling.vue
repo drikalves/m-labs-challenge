@@ -4,11 +4,11 @@
       <div class="scheduling__form-container">
         <Card :title="'Redes Sociais'">
           <div class="scheduling__form-social">
-            <span class="m-button-social">
-              <i class="fab fa-instagram" @click="selectSocialMidia('instagram')"></i>
+            <span class="m-button-social" @click="selectSocialMidia('instagram')">
+              <i class="fab fa-instagram"></i>
             </span>
-            <span class="m-button-social">
-              <i class="fab fa-linkedin-in" @click="selectSocialMidia('linkedin')"></i>
+            <span class="m-button-social" @click="selectSocialMidia('linkedin')">
+              <i class="fab fa-linkedin-in"></i>
             </span>
             <span class="m-button-social m-button-social--is-disabled ">
               <i class="fab fa-youtube"></i>
@@ -78,7 +78,11 @@
 
     <section class="scheduling__preview">
       <Card class="scheduling__preview__post" title="Visualização do post">
-        <div class="scheduling__preview__post__default">
+        <PostInstagram v-if="post.socialMedia === 'instagram'" :post="post" />
+
+        <PostLinkedin v-else-if="post.socialMedia === 'linkedin'" :post="post"/>
+
+        <div v-else class="scheduling__preview__post__default">
           <p class="scheduling__preview__post__default__text">
             Aguardando conteúdo. Informe os canais e as mídias desejadas para visualização.
           </p>
@@ -87,10 +91,6 @@
             <img src="../assets/images/preview-default.png" alt="Imagem default">
           </figure>
         </div>
-
-        <!-- <PostInstagram /> -->
-
-        <!-- <PostLinkedin /> -->
       </Card>
 
       <button class="scheduling__preview-button
@@ -109,16 +109,16 @@
 <script>
 import Footer from '@/components/scheduling/Footer.vue';
 import Card from '@/components/Card.vue';
-// import PostInstagram from '@/components/PostInstagram.vue';
-// import PostLinkedin from '@/components/PostLinkedin.vue';
+import PostInstagram from '@/components/PostInstagram.vue';
+import PostLinkedin from '@/components/PostLinkedin.vue';
 
 export default {
   name: 'Scheduling',
   components: {
     Footer,
     Card,
-    // PostInstagram,
-    // PostLinkedin,
+    PostInstagram,
+    PostLinkedin,
   },
   data() {
     return {

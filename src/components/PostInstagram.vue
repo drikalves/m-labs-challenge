@@ -10,7 +10,7 @@
     </div>
 
     <figure class="post-instagram__image">
-      <img src="../assets/images/photo1.jpg" alt="">
+      <img :src="post.image">
     </figure>
 
     <div class="post-instagram__footer">
@@ -22,7 +22,9 @@
 
         <i class="far fa-bookmark"></i>
       </div>
-      <p class="post-instagram__footer__text">Aqui vai o texto descritivo desse post</p>
+      <p class="post-instagram__footer__text">
+        {{ post.text }}
+      </p>
     </div>
   </div>
 </template>
@@ -30,6 +32,9 @@
 <script>
 export default {
   name: 'PostInstagram',
+  props: {
+    post: Object,
+  },
 };
 </script>
 
@@ -68,6 +73,7 @@ export default {
     img {
       height: 368px;
       width: 100%;
+      object-fit: cover;
     }
   }
 
@@ -95,6 +101,7 @@ export default {
 
     .post-instagram__footer__text {
       font-size: 14px;
+      word-wrap: break-word;
     }
   }
 }

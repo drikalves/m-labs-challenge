@@ -20,7 +20,7 @@
           </i>
         </td>
         <td>
-          <img class="scheduling-list__midia" :src="post.image" alt="" />
+          <img class="scheduling-list__midia" :src="post.image">
         </td>
         <td>
           <p class="scheduling-list__text">

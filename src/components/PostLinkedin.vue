@@ -7,14 +7,18 @@
 
       <div class="post-linkedin__header__text">
         <p class="post-linkedin__header__text__title">Anselmo Carlos</p>
-        <p class="post-linkedin__header__text__date">06 de Setembro</p>
+        <p class="post-linkedin__header__text__date">
+          {{ post.date }}
+        </p>
       </div>
     </div>
 
-    <p class="post-linkedin__text">Aqui vai o texto descritivo desse post</p>
+    <p class="post-linkedin__text">
+      {{ post.text }}
+    </p>
 
     <figure class="post-linkedin__image">
-      <img src="../assets/images/photo1.jpg" alt="" />
+      <img :src="post.image">
     </figure>
 
     <div class="post-linkedin__footer">
@@ -32,6 +36,9 @@
 <script>
 export default {
   name: 'PostLinkedin',
+  props: {
+    post: Object,
+  },
 };
 </script>
 
@@ -82,6 +89,7 @@ export default {
     padding-bottom: 14px;
     padding-left: 14px;
     padding-right: 14px;
+    word-wrap: break-word;
   }
 
   .post-linkedin__image {
@@ -90,6 +98,7 @@ export default {
     img {
       height: 368px;
       width: 100%;
+      object-fit: cover;
     }
   }
 
