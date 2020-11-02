@@ -7,7 +7,11 @@
 
       <button class="m-button m-button--small m-button--outline" href="">Rascunho</button>
 
-      <button @click="schedule()" class="m-button m-button--small m-button--primary">
+      <button
+        @click="schedule()"
+        class="m-button m-button--small m-button--primary"
+        :class="{ 'm-button--is-disabled': !isValidPost }"
+      >
         Agendar
       </button>
     </div>
@@ -34,7 +38,6 @@ export default {
   methods: {
     ...mapActions(['schedulePost']),
     schedule() {
-      console.log(this.isValidPost);
       if (this.isValidPost) {
         this.schedulePost(this.post);
         this.$router.push({ name: 'SchedulingList' });
