@@ -53,7 +53,7 @@
       <Card :title="'Texto do post'">
         <textarea
           v-model="post.text"
-          class="m-textarea"
+          class="scheduling__form__text m-textarea"
           placeholder="Escreva uma legenda">
         </textarea>
       </Card>
@@ -230,6 +230,10 @@ export default {
         margin-right: 30px;
       }
     }
+  }
+
+  .scheduling__form__text {
+    font-family: "Poppins", sans-serif;
   }
 
   .scheduling__form__upload {

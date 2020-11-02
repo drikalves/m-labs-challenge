@@ -46,7 +46,6 @@ export default {
   color: rgb(51, 51, 51);
   display: flex;
   flex-direction: column;
-  font-family: Poppins, Arial, sans-serif;
   max-width: 368px;
 
   .post-instagram__header {

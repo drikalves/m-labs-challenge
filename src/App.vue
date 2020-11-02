@@ -26,6 +26,7 @@ export default {
 
 #app {
   background-color: rgb(248, 248, 248);
+  font-family: 'Poppins', sans-serif;
   min-height: 100vh;
 }
 </style>

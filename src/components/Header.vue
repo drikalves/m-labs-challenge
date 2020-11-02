@@ -53,7 +53,6 @@
         align-items: center;
         color: rgb(0, 0, 0);
         display: flex;
-        font-family: Poppins, Arial, sans-serif;
         font-size: 14px;
         font-weight: bold;
         margin-left: 8px;

@@ -27,7 +27,6 @@ export default {
   color: rgb(51, 51, 51);
   display: flex;
   flex-direction: column;
-  font-family: Poppins, Arial, sans-serif;
   width: 100%;
 
   .m-card__title {
