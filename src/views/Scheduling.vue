@@ -77,10 +77,17 @@
     </section>
 
     <section class="scheduling__preview">
-      <Card class="scheduling__preview__post" title="Visualização do post">
+      <Card
+        class="scheduling__preview__post"
+        :class="{ 'scheduling__preview__post--is-open': showMobilePreview }"
+        title="Visualização do post"
+        :closable="!isDesktop"
+        @closed="closeMobilePreview"
+      >
+
         <PostInstagram v-if="post.socialMedia === 'instagram'" :post="post" />
 
-        <PostLinkedin v-else-if="post.socialMedia === 'linkedin'" :post="post"/>
+        <PostLinkedin v-else-if="post.socialMedia === 'linkedin'" :post="post" />
 
         <div v-else class="scheduling__preview__post__default">
           <p class="scheduling__preview__post__default__text">
@@ -93,11 +100,14 @@
         </div>
       </Card>
 
-      <button class="scheduling__preview-button
-        m-button
-        m-button--large
-        m-button--secondary
-        m-button--block" href="">
+      <button
+        @click="openMobilePreview"
+        class="scheduling__preview-button
+          m-button
+          m-button--large
+          m-button--secondary
+          m-button--block"
+        >
         Visualizar post
       </button>
     </section>
@@ -107,6 +117,8 @@
 </template>
 
 <script>
+import VueScreenSize from 'vue-screen-size';
+
 import Footer from '@/components/scheduling/Footer.vue';
 import Card from '@/components/scheduling/Card.vue';
 import PostInstagram from '@/components/scheduling/PostInstagram.vue';
@@ -120,6 +132,7 @@ export default {
     PostInstagram,
     PostLinkedin,
   },
+  mixins: [VueScreenSize.VueScreenSizeMixin],
   data() {
     return {
       post: {
@@ -130,7 +143,13 @@ export default {
         image: null,
         status: 'scheduled',
       },
+      showMobilePreview: false,
     };
+  },
+  computed: {
+    isDesktop() {
+      return this.$vssWidth >= 961;
+    },
   },
   methods: {
     uploadFile(event) {
@@ -156,6 +175,12 @@ export default {
     selectSocialMidia(value) {
       this.post.socialMedia = value;
     },
+    openMobilePreview() {
+      this.showMobilePreview = true;
+    },
+    closeMobilePreview() {
+      this.showMobilePreview = false;
+    },
   },
 };
 </script>
@@ -168,6 +193,7 @@ export default {
   padding-left: 24px;
   padding-right: 24px;
   padding-top: 16px;
+  overflow: hidden;
 
   @media only screen and (min-width: 961px) {
     flex-direction: row;
@@ -293,8 +319,22 @@ export default {
   .scheduling__preview__post {
     display: none;
 
+    &--is-open {
+      display: flex;
+      left: 0;
+      min-height: 100vh;
+      position: absolute;
+      right: 0;
+      top: 80px;
+      overflow-x: hidden;
+      z-index: 1;
+    }
+
     @media only screen and (min-width: 961px) {
       display: flex;
+      position: static;
+      min-height: auto;
+      z-index: 0;
     }
 
     .scheduling__preview__post__default {

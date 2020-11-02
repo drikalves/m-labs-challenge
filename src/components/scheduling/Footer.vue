@@ -59,6 +59,7 @@ export default {
   padding-top: 16px;
   justify-content: center;
   width: 100%;
+  z-index: 0;
 
   @media only screen and (min-width: 961px) {
     padding-left: 32px;
