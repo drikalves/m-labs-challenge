@@ -73,6 +73,8 @@ export default {
   }
 
   .m-card__content {
+    display: flex;
+    justify-content: center;
     padding: 18px;
   }
 }

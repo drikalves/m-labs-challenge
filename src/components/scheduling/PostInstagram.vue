@@ -46,7 +46,7 @@ export default {
   color: rgb(51, 51, 51);
   display: flex;
   flex-direction: column;
-  max-width: 368px;
+  width: 368px;
 
   .post-instagram__header {
     display: flex;

@@ -74,6 +74,17 @@
           <input @change="uploadFile" type="file" id="arquivo">
         </div>
       </Card>
+
+      <button
+        @click="openMobilePreview"
+        class="scheduling__form__preview-button
+          m-button
+          m-button--large
+          m-button--secondary
+          m-button--block"
+        >
+        Visualizar post
+      </button>
     </section>
 
     <section class="scheduling__preview">
@@ -83,7 +94,7 @@
         title="Visualização do post"
         :closable="!isDesktop"
         @closed="closeMobilePreview"
-      >
+        >
 
         <PostInstagram v-if="post.socialMedia === 'instagram'" :post="post" />
 
@@ -99,17 +110,6 @@
           </figure>
         </div>
       </Card>
-
-      <button
-        @click="openMobilePreview"
-        class="scheduling__preview-button
-          m-button
-          m-button--large
-          m-button--secondary
-          m-button--block"
-        >
-        Visualizar post
-      </button>
     </section>
 
     <Footer :post="post" />
@@ -309,6 +309,14 @@ export default {
       max-width: 180px;
     }
   }
+
+  .scheduling__form__preview-button {
+    font-size: 16px;
+
+    @media only screen and (min-width: 961px) {
+      display: none;
+    }
+  }
 }
 
 .scheduling__preview {
@@ -348,14 +356,6 @@ export default {
         margin-bottom: 40px;
         text-align: center;
       }
-    }
-  }
-
-  .scheduling__preview-button {
-    font-size: 16px;
-
-    @media only screen and (min-width: 961px) {
-      display: none;
     }
   }
 }
