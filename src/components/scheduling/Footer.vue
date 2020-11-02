@@ -1,13 +1,13 @@
 <template>
   <footer class="footer">
     <div class="footer__container">
-      <router-link :to="{name: 'Home'}" class="m-button m-button--tertiary">
+      <router-link :to="{name: 'Home'}" class="m-button m-button--small m-button--tertiary">
         Cancelar
       </router-link>
 
-      <button class="m-button m-button--outline" href="">Rascunho</button>
+      <button class="m-button m-button--small m-button--outline" href="">Rascunho</button>
 
-      <button @click="schedule()" class="m-button m-button--primary">
+      <button @click="schedule()" class="m-button m-button--small m-button--primary">
         Agendar
       </button>
     </div>
@@ -61,10 +61,9 @@ export default {
   width: 100%;
 
   @media only screen and (min-width: 961px) {
-      font-size: 16px;
-      padding-left: 40px;
-      padding-right: 40px;
-    }
+    padding-left: 32px;
+    padding-right: 32px;
+  }
 
   .footer__container {
     display: flex;

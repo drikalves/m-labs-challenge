@@ -67,7 +67,7 @@
           </p>
 
           <label
-            class="scheduling__form__upload__button m-button m-button--large m-button--outline"
+            class="scheduling__form__upload__button m-button m-button--outline"
             for="arquivo">
             Pesquisar imagens
           </label>
@@ -171,7 +171,7 @@ export default {
 
   @media only screen and (min-width: 961px) {
     flex-direction: row;
-    padding-bottom: 104px;
+    padding-bottom: 96px;
     padding-left: 32px;
     padding-right: 32px;
     padding-top: 32px;
@@ -188,25 +188,33 @@ export default {
 }
 
 .scheduling__form {
+  align-content: stretch;
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
 
   .m-card {
     margin-bottom: 16px;
 
     @media only screen and (min-width: 961px) {
       margin-bottom: 32px;
+
+      &:last-of-type {
+        margin-bottom: 0;
+      }
     }
   }
 
   .scheduling__form-container {
+    width: 100%;
+
     @media only screen and (min-width: 961px) {
       display: flex;
       flex-direction: row;
       margin-bottom: 32px;
+      width: 100%;
 
       .m-card {
-        margin-bottom: 0px;
+        margin-bottom: 0;
         margin-right: 32px;
 
         &:last-child {
@@ -227,7 +235,7 @@ export default {
       width: 100%;
 
       .m-input:first-of-type {
-        margin-right: 30px;
+        margin-right: 16px;
       }
     }
   }
@@ -264,12 +272,13 @@ export default {
       @media only screen and (min-width: 961px) {
         display: block;
         font-size: 16px;
-        margin-bottom: 24px;
+        margin-bottom: 20px;
       }
     }
 
     .scheduling__form__upload__button {
-      display: inline;
+      display: inline-flex;
+      text-align: center;
       font-size: 16px;
       max-width: 180px;
     }
@@ -277,6 +286,8 @@ export default {
 }
 
 .scheduling__preview {
+  align-content: stretch;
+  display: flex;
   min-height: 100%;
 
   .scheduling__preview__post {
