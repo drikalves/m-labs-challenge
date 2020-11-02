@@ -2,7 +2,7 @@
   <div class="post-instagram">
     <div class="post-instagram__header">
       <figure class="post-instagram__header__logo">
-        <img src="../assets/images/instagram-logo.svg"
+        <img src="../../assets/images/instagram-logo.svg"
           alt="Instagram logo">
       </figure>
 
@@ -72,8 +72,8 @@ export default {
 
     img {
       height: 368px;
-      width: 100%;
       object-fit: cover;
+      width: 100%;
     }
   }
 

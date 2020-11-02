@@ -17,11 +17,11 @@
   align-items: center;
   background: rgb(255, 255, 255);
   display: flex;
+  justify-content: space-between;
   padding-bottom: 16px;
   padding-left: 24px;
   padding-top: 16px;
   padding-right: 24px;
-  justify-content: space-between;
   height: 80px;
 
   .header__logo {
@@ -51,8 +51,8 @@
 
       @media only screen and (min-width: 961px) {
         align-items: center;
-        display: flex;
         color: rgb(0, 0, 0);
+        display: flex;
         font-family: Poppins, Arial, sans-serif;
         font-size: 14px;
         font-weight: bold;

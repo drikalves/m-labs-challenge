@@ -20,7 +20,9 @@
           </i>
         </td>
         <td>
-          <img class="scheduling-list__midia" :src="post.image">
+          <figure class="scheduling-list__midia">
+            <img :src="post.image">
+          </figure>
         </td>
         <td>
           <p class="scheduling-list__text">
@@ -109,6 +111,12 @@ export default {
   .scheduling-list__midia {
     height: 50px;
     width: 50px;
+
+    img {
+      height: 100%;
+      object-fit: cover;
+      width: 100%;
+    }
   }
 
   .scheduling-list__text {

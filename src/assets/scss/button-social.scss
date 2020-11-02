@@ -8,27 +8,27 @@
 	display: flex;
 	font-size: 16px;
 	height: 32px;
+	margin: 0;
 	justify-content: center;
 	position: relative;
 	width: 32px;
-	margin: 0;
 
   &:hover {
-    color: rgb(239, 159, 46);
     background-color: rgb(255, 243, 224);
-    border-color: rgb(239, 159, 46);
+		border-color: rgb(239, 159, 46);
+		color: rgb(239, 159, 46);
   }
 
   &.m-button-social--is-active {
-    color: rgb(255, 255, 255);
     background-color: linear-gradient(135deg, rgb(239,159,46) 25%, rgb(224, 43, 75) 105.56%);
-	border-color: rgb(239, 159, 46);
+		border-color: rgb(239, 159, 46);
+		color: rgb(255, 255, 255);
   }
 
   &.m-button-social--is-disabled {
-    background-color: rgb(221, 221, 221);
+		background-color: rgb(221, 221, 221);
+		border-color: rgb(158, 158, 158);
     color: rgb(158, 158, 158);
-	border-color: rgb(158, 158, 158);
   	cursor: not-allowed;
   }
 }

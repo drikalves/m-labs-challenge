@@ -108,9 +108,9 @@
 
 <script>
 import Footer from '@/components/scheduling/Footer.vue';
-import Card from '@/components/Card.vue';
-import PostInstagram from '@/components/PostInstagram.vue';
-import PostLinkedin from '@/components/PostLinkedin.vue';
+import Card from '@/components/scheduling/Card.vue';
+import PostInstagram from '@/components/scheduling/PostInstagram.vue';
+import PostLinkedin from '@/components/scheduling/PostLinkedin.vue';
 
 export default {
   name: 'Scheduling',
@@ -170,11 +170,11 @@ export default {
   padding-top: 16px;
 
   @media only screen and (min-width: 961px) {
+    flex-direction: row;
     padding-bottom: 104px;
     padding-left: 32px;
     padding-right: 32px;
     padding-top: 32px;
-    flex-direction: row;
 
     & > section {
       margin-right: 32px;

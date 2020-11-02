@@ -31,9 +31,9 @@ export default {
   padding-bottom: 64px;
 
   .home__image {
-    max-width: 100%;
-    margin-top: 84px;
     margin-bottom: 50px;
+    margin-top: 84px;
+    max-width: 100%;
   }
 
   .home__button {

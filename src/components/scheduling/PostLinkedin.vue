@@ -2,7 +2,7 @@
   <div class="post-linkedin">
     <div class="post-linkedin__header">
       <figure class="post-linkedin__header__logo">
-        <img src="../assets/images/linkedin-logo.svg" alt="Linkedin logo" />
+        <img src="../../assets/images/linkedin-logo.svg" alt="Linkedin logo" />
       </figure>
 
       <div class="post-linkedin__header__text">
@@ -97,8 +97,8 @@ export default {
 
     img {
       height: 368px;
-      width: 100%;
       object-fit: cover;
+      width: 100%;
     }
   }
 
