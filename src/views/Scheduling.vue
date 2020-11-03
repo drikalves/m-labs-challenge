@@ -30,21 +30,27 @@
             <div class="m-input">
               <i class="m-input__icon fas fa-calendar-alt"></i>
 
-              <input v-model="post.date"
-                class="m-input__field"
-                type="text"
+              <datetime
+                v-model="post.date"
+                type="date"
+                input-class="m-input__field"
+                format="dd/MM/yyyy"
                 placeholder="DD/MM"
-                name="date">
+                auto
+              />
             </div>
 
             <div class="m-input">
               <i class="m-input__icon fas fa-clock m-icon"></i>
 
-              <input v-model="post.time"
-                class="m-input__field"
-                type="text"
+              <datetime
+                v-model="post.time"
+                type="time"
+                input-class="m-input__field"
+                format="HH:mm"
                 placeholder="HH:MM"
-                name="time">
+                auto
+              />
             </div>
           </div>
         </Card>
@@ -143,6 +149,7 @@ export default {
         image: null,
         status: 'scheduled',
       },
+      date: null,
       showMobilePreview: false,
     };
   },

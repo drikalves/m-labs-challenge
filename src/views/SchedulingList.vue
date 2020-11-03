@@ -30,7 +30,7 @@
           </p>
         </td>
         <td>
-          <p>{{ post.date }} às {{ post.time }}</p>
+          <p>{{ formatPostDateTime(post) }}</p>
         </td>
         <td>
           <a href="">Preview</a>
@@ -71,11 +71,19 @@
 
 <script>
 import { mapState } from 'vuex';
+import { DateTime } from 'luxon';
 
 export default {
   name: 'SchedulingList',
   components: {},
   computed: mapState(['schedulePosts']),
+  methods: {
+    formatPostDateTime({ date, time }) {
+      const postDate = DateTime.fromISO(date).setLocale('pt').toFormat('dd/MM/yyyy');
+      const postTime = DateTime.fromISO(time).setLocale('pt').toFormat('HH:MM');
+      return `${postDate} às ${postTime}h`;
+    },
+  },
 };
 </script>
 

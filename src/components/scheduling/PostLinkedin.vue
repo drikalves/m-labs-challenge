@@ -8,7 +8,7 @@
       <div class="post-linkedin__header__text">
         <p class="post-linkedin__header__text__title">Anselmo Carlos</p>
         <p class="post-linkedin__header__text__date">
-          {{ post.date }}
+          {{ formattedDate }}
         </p>
       </div>
     </div>
@@ -34,10 +34,18 @@
 </template>
 
 <script>
+import { DateTime } from 'luxon';
+
 export default {
   name: 'PostLinkedin',
   props: {
     post: Object,
+  },
+  computed: {
+    formattedDate() {
+      const { date } = this.post;
+      return DateTime.fromISO(date).setLocale('pt').toFormat('dd LLLL');
+    },
   },
 };
 </script>
