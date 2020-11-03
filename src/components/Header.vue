@@ -2,7 +2,7 @@
   <header class="header">
     <i class="header__bars fas fa-bars fa-2x"></i>
     <img class="header__logo"
-      src="../assets/images/mlabs-logo.png"
+      src="../assets/images/mlabs-logo.svg"
       alt="logo">
 
     <div class="header__user">

@@ -18,7 +18,7 @@
             >
               <i class="fab fa-linkedin-in"></i>
             </span>
-            <span class="m-button-social m-button-social--is-disabled ">
+            <span class="m-button-social m-button-social--is-disabled">
               <i class="fab fa-youtube"></i>
             </span>
             <span class="m-button-social m-button-social--is-disabled">
@@ -68,7 +68,7 @@
         <textarea
           v-model="post.text"
           class="scheduling__form__text m-textarea"
-          placeholder="Escreva uma legenda">
+          placeholder="Aqui vai o texto descritivo desse post">
         </textarea>
       </Card>
 
@@ -120,7 +120,7 @@
           </p>
 
           <figure>
-            <img src="../assets/images/preview-default.png" alt="Imagem default">
+            <img src="../assets/images/preview-default.svg" alt="Imagem default">
           </figure>
         </div>
       </Card>

@@ -5,7 +5,7 @@
     aria-modal="true">
     <div class="m-modal__wrapper">
       <div class="m-modal__dialog">
-        <img src="../../assets/images/emoji.png" alt="Emoji" />
+        <img src="../../assets/images/emoji.svg" alt="Emoji" />
         <p>Agendado com sucesso!</p>
         <button
           class="m-modal__button m-button m-button--large m-button--primary"
@@ -36,8 +36,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-// Base
-
 .m-modal {
   align-items: center;
   background-color: rgb(0, 0, 0, 50%);
@@ -52,8 +50,6 @@ export default {
   right: 0;
   top: 0;
   z-index: 1;
-
-  // State
 
   &--is-open {
     max-height: 100vh;
@@ -80,8 +76,6 @@ export default {
     min-width: 872px;
   }
 }
-
-// Elements
 
 .m-modal__dialog {
   border-radius: 4px;
