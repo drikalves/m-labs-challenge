@@ -20,10 +20,10 @@
   }
 
   &.m-button-social--is-active {
-    background-color: linear-gradient(135deg, rgb(239,159,46) 25%, rgb(224, 43, 75) 105.56%);
+    background: linear-gradient(135deg, rgb(239, 159, 46) 25%, rgb(224, 43, 75) 105.56%);
 		border-color: rgb(239, 159, 46);
 		color: rgb(255, 255, 255);
-  }
+	}
 
   &.m-button-social--is-disabled {
 		background-color: rgb(221, 221, 221);

@@ -4,10 +4,18 @@
       <div class="scheduling__form-container">
         <Card :title="'Redes Sociais'">
           <div class="scheduling__form-social">
-            <span class="m-button-social" @click="selectSocialMidia('instagram')">
+            <span
+              class="m-button-social"
+              :class="{'m-button-social--is-active': isInstagramPost}"
+              @click="selectSocialMidia('instagram')"
+            >
               <i class="fab fa-instagram"></i>
             </span>
-            <span class="m-button-social" @click="selectSocialMidia('linkedin')">
+            <span
+              class="m-button-social"
+              :class="{'m-button-social--is-active': isLinkedInPost}"
+              @click="selectSocialMidia('linkedin')"
+            >
               <i class="fab fa-linkedin-in"></i>
             </span>
             <span class="m-button-social m-button-social--is-disabled ">
@@ -102,9 +110,9 @@
         @closed="closeMobilePreview"
         >
 
-        <PostInstagram v-if="post.socialMedia === 'instagram'" :post="post" />
+        <PostInstagram v-if="isInstagramPost" :post="post" />
 
-        <PostLinkedin v-else-if="post.socialMedia === 'linkedin'" :post="post" />
+        <PostLinkedin v-else-if="isLinkedInPost" :post="post" />
 
         <div v-else class="scheduling__preview__post__default">
           <p class="scheduling__preview__post__default__text">
@@ -156,6 +164,12 @@ export default {
   computed: {
     isDesktop() {
       return this.$vssWidth >= 961;
+    },
+    isInstagramPost() {
+      return this.post.socialMedia === 'instagram';
+    },
+    isLinkedInPost() {
+      return this.post.socialMedia === 'linkedin';
     },
   },
   methods: {

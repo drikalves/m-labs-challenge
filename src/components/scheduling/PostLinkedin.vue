@@ -43,6 +43,10 @@ export default {
   },
   computed: {
     formattedDate() {
+      if (this.post.date === '' || this.post.date === null) {
+        return '';
+      }
+
       const { date } = this.post;
       return DateTime.fromISO(date).setLocale('pt').toFormat('dd LLLL');
     },
