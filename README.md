@@ -1,4 +1,4 @@
-# mlabs-test
+# m-labs-challenge
 
 ## Project setup
 ```
