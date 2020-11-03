@@ -5,11 +5,7 @@ Vue.use(Vuex);
 
 export default new Vuex.Store({
   state: {
-    schedulePosts: [
-      {
-        socialMedia: 'instagram', date: '2020-11-02T00:00:00.000Z', time: '2020-11-02T23:50:00.000Z', text: 'lorem', image: '', status: 'scheduled',
-      },
-    ],
+    schedulePosts: [],
   },
   mutations: {
     schedulePost(state, post) {
