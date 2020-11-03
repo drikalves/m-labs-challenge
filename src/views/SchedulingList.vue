@@ -34,7 +34,7 @@
           <p>{{ formatPostDateTime(post) }}</p>
         </td>
         <td>
-          <a href="">Preview</a>
+          <a>Preview</a>
         </td>
         <td>
           <div v-if="post.status === 'scheduled'" class="scheduling-list__status">
