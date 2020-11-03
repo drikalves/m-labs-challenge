@@ -80,8 +80,8 @@ export default {
   computed: mapState(['schedulePosts']),
   methods: {
     formatPostDateTime({ date, time }) {
-      const postDate = DateTime.fromISO(date).setLocale('pt').toFormat('dd/MM/yyyy');
-      const postTime = DateTime.fromISO(time).setLocale('pt').toFormat('HH:MM');
+      const postDate = DateTime.fromISO(date).setLocale('pt').toLocaleString(DateTime.DATE_SHORT);
+      const postTime = DateTime.fromISO(time).setLocale('pt').toLocaleString(DateTime.TIME_24_SIMPLE);
       return `${postDate} às ${postTime}h`;
     },
   },

@@ -39,8 +39,8 @@ export default {
 // Base
 
 .m-modal {
-  background-color: rgb(0, 0, 0, 50%);
   align-items: center;
+  background-color: rgb(0, 0, 0, 50%);
   bottom: 0;
   display: flex;
   justify-content: center;
@@ -63,8 +63,8 @@ export default {
 }
 
 .m-modal__wrapper {
-  background-color: rgb(250, 250, 250);
   align-items: center;
+  background-color: rgb(250, 250, 250);
   display: flex;
   flex-direction: column;
   height: 419px;
@@ -77,7 +77,7 @@ export default {
   width: 350px;
 
   @media only screen and (min-width: 961px) {
-    width: 872px;
+    min-width: 872px;
   }
 }
 
@@ -88,7 +88,6 @@ export default {
   font-size: 18px;
   height: 100%;
   line-height: 36px;
-  margin-bottom: 20px;
   pointer-events: auto;
   text-align: center;
   width: 100%;
@@ -96,7 +95,8 @@ export default {
 
 .m-modal__button {
   display: inline-flex;
-  width: 184px;
   height: 45px;
+  margin-top: 20px;
+  width: 184px;
 }
 </style>

@@ -187,16 +187,6 @@ export default {
         reader.readAsDataURL(input.files[0]);
       }
     },
-    previewImage(event) {
-      const input = event.target;
-      if (input.files && input.files[0]) {
-        const reader = new FileReader();
-        reader.onload = (e) => {
-          this.imageData = e.target.result;
-        };
-        reader.readAsDataURL(input.files[0]);
-      }
-    },
     selectSocialMidia(value) {
       this.post.socialMedia = value;
     },
@@ -296,6 +286,7 @@ export default {
 
   .scheduling__form__text {
     font-family: "Poppins", sans-serif;
+    resize: none;
   }
 
   .scheduling__form__upload {
