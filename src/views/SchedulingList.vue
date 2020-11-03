@@ -12,12 +12,13 @@
 
       <tr v-for="(post, index) in schedulePosts" :key="index">
         <td>
-          <i v-if="post.socialMedia === 'instagram'"
-            class="scheduling-list__icon schedule-list__icon--instagram fab fa-instagram">
-          </i>
-          <i v-else-if="post.socialMedia === 'linkedin'"
-            class="scheduling-list__icon schedule-list__icon--linkedin fab fa-linkedin-in">
-          </i>
+          <figure v-if="post.socialMedia === 'instagram'">
+            <img src="../assets/images/instagram-logo-list.svg">
+          </figure>
+
+          <figure  v-else-if="post.socialMedia === 'linkedin'">
+            <img src="../assets/images/linkedin-logo-list.svg">
+          </figure>
         </td>
         <td>
           <figure class="scheduling-list__midia">
@@ -97,26 +98,8 @@ export default {
   padding-top: 80px;
   white-space: nowrap;
 
-  .scheduling-list__icon {
-    align-items: center;
-    border-radius: 50%;
-    color: rgb(255, 255, 255);
-    display: flex;
-    font-size: 16px;
-    height: 32px;
-    justify-content: center;
-    width: 32px;
-
-    &.schedule-list__icon--instagram {
-      background-color: rgb(214, 15, 134);
-    }
-
-    &.schedule-list__icon--linkedin {
-      background-color: rgb(58, 112, 218);
-    }
-  }
-
   .scheduling-list__midia {
+    display: inline-flex;
     height: 50px;
     width: 50px;
 
