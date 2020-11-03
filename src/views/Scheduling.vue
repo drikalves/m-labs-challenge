@@ -126,7 +126,8 @@
       </Card>
     </section>
 
-    <Footer :post="post" />
+    <Modal :open="showScheduleConfirmationModal" />
+    <Footer :post="post" @scheduled="showScheduleConfirmation" />
   </div>
 </template>
 
@@ -137,6 +138,7 @@ import Footer from '@/components/scheduling/Footer.vue';
 import Card from '@/components/scheduling/Card.vue';
 import PostInstagram from '@/components/scheduling/PostInstagram.vue';
 import PostLinkedin from '@/components/scheduling/PostLinkedin.vue';
+import Modal from '@/components/scheduling/Modal.vue';
 
 export default {
   name: 'Scheduling',
@@ -145,6 +147,7 @@ export default {
     Card,
     PostInstagram,
     PostLinkedin,
+    Modal,
   },
   mixins: [VueScreenSize.VueScreenSizeMixin],
   data() {
@@ -159,6 +162,7 @@ export default {
       },
       date: null,
       showMobilePreview: false,
+      showScheduleConfirmationModal: false,
     };
   },
   computed: {
@@ -201,6 +205,9 @@ export default {
     },
     closeMobilePreview() {
       this.showMobilePreview = false;
+    },
+    showScheduleConfirmation() {
+      this.showScheduleConfirmationModal = true;
     },
   },
 };

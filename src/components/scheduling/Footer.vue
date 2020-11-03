@@ -40,7 +40,7 @@ export default {
     schedule() {
       if (this.isValidPost) {
         this.schedulePost(this.post);
-        this.$router.push({ name: 'SchedulingList' });
+        this.$emit('scheduled');
       }
     },
   },

@@ -16,7 +16,7 @@
             <img src="../assets/images/instagram-logo-list.svg">
           </figure>
 
-          <figure  v-else-if="post.socialMedia === 'linkedin'">
+          <figure v-else-if="post.socialMedia === 'linkedin'">
             <img src="../assets/images/linkedin-logo-list.svg">
           </figure>
         </td>
